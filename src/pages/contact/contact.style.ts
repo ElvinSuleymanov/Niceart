@@ -27,26 +27,47 @@ const styles:Styles = {
            borderWidth:rem(4),
            borderStyle:'solid',
            objectFit:'cover',
+           '@media(max-width:600px)': {
+                width:rem(135),
+                height:rem(183)
+           },
            '&:last-child': {
                 position:'absolute',
                 right:rem(0),
-                zIndex:4
+                zIndex:4,
+                '@media(max-width:600px)': {
+                    right:rem(80),
+                    top:rem(100)
+                }
            },
            '&:nth-child(3)': {
                 position:'absolute',
                 right:rem(40),
                 bottom:rem(-40),
-                zIndex:5
+                zIndex:5,
+
+                '@media(max-width:600px)': {
+                    right:rem(110),
+                    bottom:rem(55),
+                }
            },
            '&:nth-child(2)': {
                 position:'absolute',
                 top:rem(0),
-                left:rem(40)
+                left:rem(40),
+                '@media(max-width:600px)': {
+                    top:rem(70),
+                    left:rem(100)
+                }
             },
             '&:first-child': {
                 position:'absolute',
                 bottom:rem(-10),
-                zIndex:10
+                zIndex:10,
+                '@media(max-width:600px)': {
+                    bottom:rem(100),
+                    left:rem(70)
+                }
             }
         }
     },
