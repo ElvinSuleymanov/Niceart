@@ -13,7 +13,8 @@ title: {
     maxWidth:rem(550),
     height:rem(200),
     '@media(max-width:992px)': {
-        textAlign:'center'
+        textAlign:'center',
+        fontSize:rem(55)
     }
 },
 text: {
@@ -80,6 +81,11 @@ bannerAbout: {
 },
 propertyLoan: {
     marginTop:rem(150),
+    '@media(max-width:992px)': {
+        flexDirection:'column',
+        alignItems:'center',
+        gap:rem(20)
+    }
 },
 propertyLoanTitle: {
     color:colors.textMain,
@@ -108,7 +114,10 @@ loanCalculator: {
 },
 loanText: {
     width:rem(414), 
-    color:colors.textMain
+    color:colors.textMain,
+    '@media(max-width:768px)': {
+        width:'auto'
+    }
 },
 loanTitleSecondary: {
     color:colors.greenMain,
@@ -118,12 +127,18 @@ loanTitleSecondary: {
 loanTitle: {
     color:colors.textMain,
     fontSize:rem(44),
-    width:rem(374)
+    width:rem(374),
+    '@media(max-width:768px)': {
+        width:'auto'
+    }
 },
 rangeInput: {
     maxWidth:rem(226),
     width:sizes.full,
-    marginTop:rem(-5)
+    marginTop:rem(-5),
+    '@media(max-width:768px)': {
+        width:'auto'
+    }
 },
 loanResult: {
     color:colors.greenMain,
@@ -150,6 +165,13 @@ inputCredentialsContainer: {
     '@media(max-width:992px)': {
         flexDirection:'column'
     }
+},
+flexColMobile: {
+    '@media(max-width:992px)': {
+    flexDirection:'column',
+    alignItems:'center',
+    gap:rem(20)
+}
 }
 };
 export const useHomePageStyles = createUseStyles(styles);

@@ -26,7 +26,7 @@ const FooterComponent = () => {
             <footer className={footerClasses}>
                    <Row className='container'>
 
-                        <Col span={6}>
+                        <Col lg={6} md={12} xs={24}>
                             <Flex vertical gap={20}>
                                 <Logo/>
                                 <p>{translate('footerText')}</p>
@@ -40,11 +40,11 @@ const FooterComponent = () => {
                             </Flex>
                         </Col>
 
-                        <Col span={6}>
+                        <Col lg={6} md={12} xs={24}>
 
                         </Col>
 
-                        <Col span={6}>
+                        <Col lg={6} md={12} xs={24}>
                           <Flex vertical gap={15}>
                                 <Typography.Title level={5}>
                                     {translate('site')}
@@ -57,7 +57,7 @@ const FooterComponent = () => {
                           </Flex>
                         </Col>
 
-                        <Col span={6}>
+                        <Col lg={6} md={12} xs={24}>
                             <Flex vertical gap={15}>
                                 <Typography.Title level={5}>
                                     {translate('contactsUs')}

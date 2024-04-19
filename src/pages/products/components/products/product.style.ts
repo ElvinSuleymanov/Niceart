@@ -7,22 +7,23 @@ const styles:Styles = {
 container: {
     backgroundColor:colors.fadedBg,
     padding:rem(40),
+    '@media(max-width:992px)': {
+       padding:rem(22)
+    },
     '& .ant-flex': {
         '& img': {
-            '@media(max-width:992px)': {
-                maxWidth:'50%' 
-            },
-            '@media(max-width:700px)': {
-                maxWidth:rem(200),
-                height:rem(200)
-            }
+        
+            marginLeft:'auto'
+        },
+        '& > .ant-flex': {
+            gap:rem(10) 
         }
     }
 },
 titleSecondary: {
     color:colors.textMain,
     fontSize:rem(44),
-    fontWeight:sizes.boldest
+    fontWeight:sizes.boldest,
 },
 titleMain: {
     fontSize:rem(60),

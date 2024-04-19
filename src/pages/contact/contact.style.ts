@@ -53,7 +53,10 @@ const styles:Styles = {
     formContainer: {
         backgroundColor:colors.fadedBg,
         marginTop:rem(170),
-        padding:rem(50)
+        padding:rem(50),
+        '@media(max-width:992px)': {
+            flexDirection:'column',
+        }
     },
     form: {
         width:sizes.full,

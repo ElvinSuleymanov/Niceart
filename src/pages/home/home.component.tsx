@@ -130,7 +130,7 @@ function HomeComponent() {
                            <Input  placeholder='+994 00 000 00 00'/>
                         </Flex>
                     </Flex>
-                    <Flex gap={35} align='center' justify='space-between'>
+                    <Flex gap={35} align='center' justify='space-between' className={classes.flexColMobile}>
                         <Flex gap={10} align='center'>
                             <Checkbox />
                             {translate('AKBpermission')}

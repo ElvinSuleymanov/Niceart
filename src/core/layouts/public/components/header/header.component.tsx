@@ -89,10 +89,9 @@ const HeaderComponent = () => {
                     </div>
                     <Flex align='center' justify='space-between' gap={40} className='col-6 p-0 gap-10 d-none d-lg-flex'>
                         {
-                            navigations.map(nav => {
+                            navigations.map((nav, index) => {
                                 let isActiveRoute;
-                                
-                                return (<NavLink to={nav.url} className={({isActive}) => {
+                                return (<NavLink key={index} to={nav.url} className={({isActive}) => {
                                   isActiveRoute = isActive;
                                   return  navActivation({isActive});
                                 }}>
@@ -110,8 +109,8 @@ const HeaderComponent = () => {
             <div className={menuClasses}>
                 <Flex align='center' vertical justify='space-between' gap={40} className={classes.innerMenu}>
                         {
-                            navigations.map(nav => (
-                                <NavLink to={nav.url} className={navActivation}>
+                            navigations.map((nav, index) => (
+                                <NavLink key={index} onClick={openMenuHandler} to={nav.url} className={navActivation}>
                                     {nav.text}
                                 </NavLink>
                             ))

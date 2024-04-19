@@ -70,7 +70,10 @@ const styles:Styles = {
    },
    loanText: {
     width:rem(414), 
-    color:colors.textMain
+    color:colors.textMain,
+    '@media(max-width:768px)': {
+        width:'auto'
+    }
 },
 loanTitleSecondary: {
     color:colors.greenMain,
@@ -80,12 +83,18 @@ loanTitleSecondary: {
 loanTitle: {
     color:colors.textMain,
     fontSize:rem(44),
-    width:rem(374)
+    width:rem(374),
+    '@media(max-width:768px)': {
+        width:'auto'
+    }
 },
 rangeInput: {
     maxWidth:rem(226),
     width:sizes.full,
-    marginTop:rem(-5)
+    marginTop:rem(-5),
+    '@media(max-width:768px)': {
+        width:'auto'
+    }
 },
 loanResult: {
     color:colors.greenMain,

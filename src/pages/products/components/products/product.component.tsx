@@ -16,14 +16,14 @@ const ProductComponent = ({interestRateRange, priceRange, duration, text, title,
     <Link className={classes.link} to={goTo(Routes.productDetail, id)}>
       <div className={classes.container}>
         <Flex justify='space-between'>
-          <Flex vertical gap={40}>
+          <Flex vertical>
               <h1 className={classes.titleThird}>
               {translate('propertyLoanTitle')}
               </h1>
               <p>
 
               </p>
-              <Flex gap={50}>
+              <Flex justify='space-between' gap={20}>
                 <Flex vertical gap={20}>
                       <h1>
                         {translate('durationMonth')}
@@ -61,7 +61,9 @@ const ProductComponent = ({interestRateRange, priceRange, duration, text, title,
             ?
             children
             :
-            <img src={image as string}  />
+            <Flex className='w-100 h-100' align='center'>
+              <img src={image as string}  />
+            </Flex>
           }
         </Flex>
       </div>
