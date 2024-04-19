@@ -78,7 +78,7 @@ function HomeComponent() {
                             Learn more
                         </span>
                     </Flex>
-                    <img src={'https://s3-alpha-sig.figma.com/img/3d1c/405a/05fcb30a8b5527e34856c8ba7eeca9c7?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U~huL6g53l-G808i9S7VdO8pdkDhL6ltj~oO2aqVwVofX1zYjxYC55-88f195cGEA25gCtlHhYJIPlJX0ztEFOrXpbLBt~ObzRmQlSFLgH7eFi-4qwJ11B6v-euHONiqsM1G0NKWRw3bLOgFuS6Nees6hJk~9qUBpuEO0fvMjpX2J9CZ~3JxiHBDgH7PIO1sB7WnJzJPoItxt75-UMaDn1~~X-jXOLreQgWbaV8LfGrc~t1IfD4A2xBbSmu2nFG3yvwKYQMV5bkfpCU3fK8rJSj3hH9LlRHIjtsPTxktczE7RYUhCcP8bBal6DBLo2IzvUZRbwIJTPg8u8-8E~6O9g__'} className={classes.bannerAboutImage} alt="" />
+                    <img src={'https://s3-alpha-sig.figma.com/img/3d1c/405a/05fcb30a8b5527e34856c8ba7eeca9c7?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U~huL6g53l-G808i9S7VdO8pdkDhL6ltj~oO2aqVwVofX1zYjxYC55-88f195cGEA25gCtlHhYJIPlJX0ztEFOrXpbLBt~ObzRmQlSFLgH7eFi-4qwJ11B6v-euHONiqsM1G0NKWRw3bLOgFuS6Nees6hJk~9qUBpuEO0fvMjpX2J9CZ~3JxiHBDgH7PIO1sB7WnJzJPoItxt75-UMaDn1~~X-jXOLreQgWbaV8LfGrc~t1IfD4A2xBbSmu2nFG3yvwKYQMV5bkfpCU3fK8rJSj3hH9LlRHIjtsPTxktczE7RYUhCcP8bBal6DBLo2IzvUZRbwIJTPg8u8-8E~6O9g__'} className={classes.bannerAboutImage} alt='' />
                 </Flex>
             </Flex>
             <Flex className={classes.propertyLoan} gap={100} align='center'>

@@ -90,7 +90,7 @@ footerText:'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam',
     productLoanTitle:'Magna feugiat morbi felis aliquam aenean.',
     productLoanText:'Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.',
     durationMonth:'Müddət (Ay)',
-    price:'Məbləğ',
+    price:'Məbləğ (AZN)',
     interestRate:'Faiz dərəcəsi (%)',
 
 
