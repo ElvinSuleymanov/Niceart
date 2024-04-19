@@ -17,6 +17,20 @@ title: {
         fontSize:rem(55)
     }
 },
+playBtn: {
+position:'absolute',
+left:rem(10),
+bottom:rem(10),
+cursor:'pointer'
+},
+imageContainer: {
+position:'relative'
+},
+video: {
+    maxWidth:rem(1028),
+    width:sizes.full,
+    margin:0 + ' auto',
+},
 text: {
     lineHeight:rem(22),
     marginBottom:rem(30),

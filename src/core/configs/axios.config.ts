@@ -7,9 +7,9 @@ import {getToken} from '../helpers/get-token';
 
 const axiosInstance = axios.create({
     baseURL: environment.apiMain,
-    // headers: {
-    //     'Authorization': 'Bearer ' + getToken()
-    // },
+    headers: {
+        'X-Master-Key': '$2a$10$Y.P17daU7i/nhthPz5RgCeK/lwySiLS/0BCNstyRdT7QFwWv9DNAe'
+    }
 });
 axiosInstance.interceptors.request.use(
     (config: InternalAxiosRequestConfig) => {

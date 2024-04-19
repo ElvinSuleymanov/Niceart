@@ -1,16 +1,24 @@
 import { Breadcrumb, Button, Card, Checkbox, Flex, Input, InputNumber, Slider, Typography } from 'antd';
 import { HomeIcon } from 'assets/images/icons/home';
 import useLocalization from 'assets/lang';
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Routes } from 'router/routes';
 import { useHomePageStyles } from './home.style';
 import ButtonComponent from 'core/shared/button/button.component';
 import { ArrowDown, ArrowRight } from 'assets/images/icons/arrows';
 import BannerBg from '../../assets/images/statics/homebanner.jpeg'; 
 import classNames from 'classnames';
+import {  useLeads, useVideo } from './actions/home.query';
+import { PlayButtonIcon } from 'assets/images/icons/play-button';
 function HomeComponent() {
     const translate = useLocalization();
     const classes = useHomePageStyles();
+    const [isVideoStarted, setIsVideoStarted] = useState<boolean>(false);
+
+    const startVideoHandler = useCallback(() => {
+        setIsVideoStarted(!isVideoStarted);
+    }, [isVideoStarted]);
+
     const breadCrumbItems = useMemo(() => (
         [
             {
@@ -34,6 +42,10 @@ function HomeComponent() {
     const [loanInterest, setInterest] = useState(0);
 
 
+    const {data:video} = useVideo();
+    const {data:leads} = useLeads();
+    console.log(leads);
+    
     return (
         <div className={containerClass}>
             <Breadcrumb items={breadCrumbItems}/>
@@ -59,7 +71,24 @@ function HomeComponent() {
                 </Flex>
             </Flex>
             <Flex justify='center' align='center' vertical gap={30} className={classes.banner}>
-                <img src={BannerBg} alt='' className={classes.bannerImage} />
+                <div className={classes.imageContainer}>
+                    {
+                        isVideoStarted && video
+                        ?
+                        <video  controls className={classes.video}>
+                            <source src={video.url} />
+                        </video>
+                        :
+                        <img src={BannerBg} alt='' className={classes.bannerImage} />
+                    }
+                    <span className={classes.playBtn} onClick={startVideoHandler}>
+                        {
+                            isVideoStarted
+                            ||
+                            <PlayButtonIcon />
+                        }
+                    </span>
+                </div>
                 <p className={classes.bannerBelowText}>
                     {translate('belowBannerText')}
                 </p>
