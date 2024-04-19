@@ -38,6 +38,14 @@ const styles:Styles = {
                 '@media(max-width:600px)': {
                     right:rem(80),
                     top:rem(100)
+                },
+                '@media(max-width:490px)': {
+                    right:rem(20),
+                    top:rem(100)
+                },
+                '@media(max-width:425px)': {
+                    right:rem(20),
+                    top:rem(115)
                 }
            },
            '&:nth-child(3)': {
@@ -49,6 +57,14 @@ const styles:Styles = {
                 '@media(max-width:600px)': {
                     right:rem(110),
                     bottom:rem(55),
+                },
+                '@media(max-width:490px)': {
+                    right:rem(70),
+                    bottom:rem(55),
+                },
+                '@media(max-width:425px)': {
+                    right:rem(40),
+                    bottom:rem(50),
                 }
            },
            '&:nth-child(2)': {
@@ -57,7 +73,11 @@ const styles:Styles = {
                 left:rem(40),
                 '@media(max-width:600px)': {
                     top:rem(70),
-                    left:rem(100)
+                    left:rem(90)
+                },
+                '@media(max-width:425px)': {
+                    top:rem(70),
+                    left:rem(50)
                 }
             },
             '&:first-child': {
@@ -66,7 +86,11 @@ const styles:Styles = {
                 zIndex:10,
                 '@media(max-width:600px)': {
                     bottom:rem(100),
-                    left:rem(70)
+                    left:rem(50)
+                },
+                '@media(max-width:425px)': {
+                    left:rem(30),
+                    
                 }
             }
         }
