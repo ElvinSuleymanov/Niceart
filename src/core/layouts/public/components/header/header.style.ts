@@ -12,8 +12,21 @@ const styles: Styles = {
     fontWeight: sizes.boldest,
   },
   activeNavEl: {
-    color: colors.greenMain,
-    fontWeight: sizes.boldest,
+    color:colors.greenMain,
+    fontWeight:sizes.boldest,
+    position: 'relative',
+    '&::before': {
+    content: '\'\'',
+    position: 'absolute',
+    left: rem(-10),
+    top: '50%',
+    transform: 'translateY(-50%)',
+    width: rem(6),
+    height: rem(6),
+    borderRadius: '50%',
+    background: colors.greenMain,
+  },
+
   },
   containerSm: {
     maxWidth: rem(1240),

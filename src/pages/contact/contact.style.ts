@@ -68,7 +68,10 @@ const styles:Styles = {
         flexDirection:'column',
         alignItems:'center',
         gap:rem(20)
-    }
+    },
+    greenMarker: {
+        filter:'hue-rotate(240deg)'
+          }
 }
 };
 

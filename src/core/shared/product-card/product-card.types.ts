@@ -1,5 +1,5 @@
-import { Product } from 'pages/products/products';
+import ProductModel from 'pages/products/models/products.model';
 
 export interface ProductCardProps {
-    product: Product;
+    product: ProductModel;
   }

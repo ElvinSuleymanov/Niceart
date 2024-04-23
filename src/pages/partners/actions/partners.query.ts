@@ -1,15 +1,9 @@
 import { useQuery } from 'react-query';
-import {  getAboutPartnersService, getCompanyCardService } from './partners.service';
-import { Company } from '../partners';
+import { getPartnersService } from './partners.service';
+import PartnersModel from '../models/partners.model';
 
-export const useGetPartnersCompamy = () => {
-  return useQuery<Company[], Error>('Partner Company Card', () => {
-    return getCompanyCardService();
-  });
-};
-
-export const useAboutPartners = () => {
-  return useQuery<Company[], Error>('About Partners', () => {
-    return getAboutPartnersService();
+export const useGetPartners = () => {
+  return useQuery<PartnersModel[], Error>('Partner Company Card', () => {
+    return getPartnersService();
   });
 };

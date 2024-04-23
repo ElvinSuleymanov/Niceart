@@ -62,6 +62,7 @@ export const useCompanyCardStyles = createUseStyles({
     transition: transition(),
     '&:hover': {
       backgroundColor: colors.greenMain,
+      color:colors.white
     },
   },
   modalBg: {

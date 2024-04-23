@@ -36,8 +36,8 @@ const FooterComponent = () => {
   return (
     <div className={classes.footerContainer}>
       <footer className={footerClasses}>
-        <Row className='container'>
-          <Col span={6}>
+        <Row className={classes.footerSm}>
+          <Col lg={6} md={12} xs={24}>
             <Flex vertical gap={20}>
               <Logo />
               <p>{translate('footerText')}</p>
@@ -51,20 +51,20 @@ const FooterComponent = () => {
             </Flex>
           </Col>
 
-          <Col span={6}></Col>
+          <Col lg={6} md={12} xs={24}></Col>
 
-          <Col span={6}>
+          <Col lg={6} md={12} xs={24}>
             <Flex vertical gap={15}>
               <Typography.Title level={5}>{translate('site')}</Typography.Title>
-              <p>{translate('homepage')}</p>
-              <p>{translate('aboutUs')}</p>
-              <p>{translate('products')}</p>
-              <p>{translate('partners')}</p>
-              <p>{translate('contact')}</p>
+              <Typography.Paragraph>{translate('homepage')}</Typography.Paragraph>
+              <Typography.Paragraph>{translate('aboutUs')}</Typography.Paragraph>
+              <Typography.Paragraph>{translate('products')}</Typography.Paragraph>
+              <Typography.Paragraph>{translate('partners')}</Typography.Paragraph>
+              <Typography.Paragraph>{translate('contact')}</Typography.Paragraph>
             </Flex>
           </Col>
 
-          <Col span={6}>
+          <Col lg={6} md={12} xs={24}>
             <Flex vertical gap={15}>
               <Typography.Title level={5}>
                 {translate('contactsUs')}
@@ -81,6 +81,20 @@ const FooterComponent = () => {
                 <LocationIcon />
                 {translate('locationOfCompany')}
               </Flex>
+            </Flex>
+          </Col>
+        </Row>
+        <Row className='container py-100'>
+          <Col lg={12}>
+            <Typography.Title level={5}>
+              Copyright Ⓒ {date} {projectName}
+            </Typography.Title>
+          </Col>
+          <Col lg={12}>
+            <Flex gap={15}>
+              <Typography>All Rights Reserved</Typography>
+              <Typography>Terms and Conditions</Typography>
+              <Typography> Privacy Policy</Typography>
             </Flex>
           </Col>
         </Row>

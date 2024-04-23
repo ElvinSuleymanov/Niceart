@@ -1,5 +1,6 @@
-export interface TextGroupProps{
-    miniTitle?:string;
-    title?:string;
-    desc?:string;
-} 
+export interface TextGroupProps {
+    tag?: string | null;
+    title?: string | null;
+    description?: string | null;
+  }
+  

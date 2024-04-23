@@ -83,10 +83,11 @@ footerText:'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam',
     ourStrategyText:`Id duis id turpis mi 
     quisque. Nulla.`,
     strategyText:'Pulvinar amet ullamcorper nec nullam accumsan, iaculis risus. Feugiat nulla in imperdiet tellus sit lobortis. Cursus adipiscing aliquam dignissim.',
-    productsMainTitle: 'Title for Products or Lorem Ipsum motto',
-    productsText:'Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam. ',
-    productsTitle:`Lectus mauris pulvinar
+    productsHeading:`Lectus mauris pulvinar
     sit?`,
+    productsTitle: 'Title for Products or Lorem Ipsum motto',
+    productsDescription:'Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam. ',
+
     productLoanTitle:'Magna feugiat morbi felis aliquam aenean.',
     productLoanText:'Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.',
     durationMonth:'Müddət (Ay)',
@@ -95,9 +96,9 @@ footerText:'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam',
 
 
     //partnters
-    partnersTitle:'Title for Partners or Lorem Ipsum motto',
-    partnersText:'Commodo interdum at lorem eget amet placerat nunc posuere. Viverra lacus, nisl cursus senectus malesuada leo donec pellentesque. Id faucibus nulla adipiscing pellentesque vulputate quis pulvinar. Sapien est vestibulum in porttitor volutpat.',
-    partnersTitleSecondary:'Lectus mauris pulvinar',
+    partnersHeading:'Title for Partners or Lorem Ipsum motto',
+    partnersDescription:'Commodo interdum at lorem eget amet placerat nunc posuere. Viverra lacus, nisl cursus senectus malesuada leo donec pellentesque. Id faucibus nulla adipiscing pellentesque vulputate quis pulvinar. Sapien est vestibulum in porttitor volutpat.',
+    partnersTitle:'Lectus mauris pulvinar',
     becamePartner:'Became a partner',
 
 

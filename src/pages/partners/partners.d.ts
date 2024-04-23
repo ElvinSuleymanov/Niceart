@@ -1,9 +1,8 @@
-export interface Company {
-    id: number;
-    name: string;
-    description: string;
-    file: { id: number; url: string };
-    site: string;
-    tag: string;
-  }
-  
+export interface Partners {
+  id: number;
+  name: string | null;
+  description: string | null;
+  file: { id: number; url: string } | null;
+  site: string | null;
+  tag: string | null;
+}

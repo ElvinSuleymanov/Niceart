@@ -15,5 +15,12 @@ const styles: Styles = {
   },
   isOpen: {
     paddingLeft: rem(sizes.leftMenu),
-  }};
+  },
+  footerSm: {
+    maxWidth: rem(1240),
+    margin: '0 auto',
+    padding: '0 15px',
+  },
+};
+
 export const useFooterStyles = createUseStyles(styles);
