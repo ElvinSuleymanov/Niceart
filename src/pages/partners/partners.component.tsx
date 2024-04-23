@@ -1,7 +1,7 @@
 import { AboutHeading } from "core/shared/about-heading/about-heading.component";
 import CompanyCard from "core/shared/company-card/company-card.companent";
 import { useGetPartners } from "./actions/partners.query";
-import { useGetLeads } from "core/common/actions/leads.query";
+import { useGetLeads } from "core/common/leads/actions/leads.query";
 import useLocalization from "assets/lang";
 
 const PartnersComponent = () => {
