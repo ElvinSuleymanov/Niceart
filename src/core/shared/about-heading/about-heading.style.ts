@@ -11,7 +11,7 @@ export const useAboutHeadingStyles = createUseStyles({
     padding: `${rem(10)} ${rem(0)}`,
   },
   heading: {
-    color: colors.mainColor,
+    color: colors.greenMain,
     fontSize: rem(72),
     marginBottom: rem(10),
     [breakpoint(768)]: {
