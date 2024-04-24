@@ -8,4 +8,4 @@ interface Leads {
         id:number;
         url:string | null;
     } |null;
-};
+}
