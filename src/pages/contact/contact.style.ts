@@ -117,6 +117,11 @@ const styles:Styles = {
         alignItems:'center',
         gap:rem(20)
     }
+},
+mapContainer: {
+    '& .leaflet-marker-icon': {
+       filter:'hue-rotate(250deg)'
+    }
 }
 };
 

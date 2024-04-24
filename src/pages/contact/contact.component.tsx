@@ -27,9 +27,8 @@ const ContactComponent = () => {
       ]
     ), [translate]);
 
-    const dubaiOperaCoordinates:LatLngExpression = useMemo(() => (
-        [25.2048, 55.2708]
-    ), []);
+    const englandOperaCoordinates:LatLngExpression = useMemo(() => (
+        [51.5074, -0.1278]), []);
   return (
     <div>
         <Breadcrumb items={breadCrumbItems} className='py-30' />
@@ -88,14 +87,14 @@ const ContactComponent = () => {
                     </ButtonComponent>
                 </Form>
             </Flex>
-        <MapContainer  center={[51.505, -0.09]} zoom={13} style={{ height: '400px' }}>
+        <MapContainer className={classes.mapContainer} center={[51.505, -0.09]} zoom={13} style={{ height: '400px'}}>
             <TileLayer
-                url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                url='https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'
+                    attribution='Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
             />
-            <Marker  position={dubaiOperaCoordinates}>
-
+            <Marker position={englandOperaCoordinates} >
             </Marker>
-        </MapContainer>
+       </MapContainer>
     </div>
   );
 };

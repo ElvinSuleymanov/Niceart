@@ -5,3 +5,6 @@ export interface ILeftMenuItemProps {
     submenu: any;
 }
 
+interface IIconProps {
+    className:string
+}
