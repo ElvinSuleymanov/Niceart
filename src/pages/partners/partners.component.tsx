@@ -40,7 +40,6 @@ const PartnersComponent = () => {
                 <ButtonComponent className={classes.partnerBtn} type='primary'>
                     <Flex gap={10} align='center'>
                         {translate('becamePartner')}
-                        <ArrowRight/>
                     </Flex>
                 </ButtonComponent>
             </Flex>

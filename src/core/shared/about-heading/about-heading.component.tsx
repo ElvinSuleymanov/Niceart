@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { useAboutHeadingStyles } from "./about-heading.style";
 import { AboutHeadingProps } from "./about-heading.types";
-import Button from "../button/button.component";
 import { Link } from "react-router-dom";
 import { Routes } from "router/routes";
+import ButtonComponent from "../button/button.component";
 export const AboutHeading: FC<AboutHeadingProps> = ({
   heading,
   title,
@@ -27,16 +27,16 @@ export const AboutHeading: FC<AboutHeadingProps> = ({
         <div className={classes.buttons}>
           {buttonFirst && (
             <Link to={Routes.partners}>
-              <Button variant={"primary"} arrow="right" size={"small"}>
+              <ButtonComponent type={"primary"} arrow="right" >
                 {buttonFirst}
-              </Button>
+              </ButtonComponent>
             </Link>
           )}
           {buttonSecond && (
             <Link to={Routes.about}>
-              <Button variant={"outline"} arrow="down" size={"meduim"}>
+              <ButtonComponent type={"secondary"} arrow="down" >
                 {buttonSecond}
-              </Button>
+              </ButtonComponent>
             </Link>
           )}
         </div>

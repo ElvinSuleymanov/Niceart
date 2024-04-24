@@ -1,8 +1,8 @@
 import { useQuery } from "react-query";
 import { getLeadsService } from "./leads.service";
 
-export const useGetLeads = () => {
-  return useQuery<any[], Error>('Leads', () => {
+export const useLeads = () => {
+  return useQuery<Leads[], Error>('Leads', () => {
     return getLeadsService();
   });
 };
