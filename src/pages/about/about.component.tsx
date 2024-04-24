@@ -6,6 +6,7 @@ import { Routes } from 'router/routes';
 import { useAboutStyles } from './about.style';
 import PurposeComponent from './components/purpose/purpose.component';
 import StrategyComponent from './components/strategy/strategy.component';
+import { useLeads } from 'core/common/leads/actions/leads.query';
 const AboutComponent = () => {
   const translate = useLocalization();
   const classes = useAboutStyles();
@@ -20,8 +21,13 @@ const AboutComponent = () => {
         }
     ]
 ), [translate]);
+  const {data} = useLeads();
+  const aboutLeads = useMemo(() => (
+    data?.find(el => el.tag === 'About')
+  ), [data]);
+  
   return (
-    <div  >
+    <div>
        <Breadcrumb className='py-30 pt-10' items={breadCrumbItems}/>
        <Flex gap={100} className={classes.mainTitleContainer}>
         <h1 className={classes.mainTitle} >
@@ -32,19 +38,18 @@ const AboutComponent = () => {
               {translate('whoWeAre')}
             </h2>
             <h1>
-              {translate('homeTitle')}
+              {aboutLeads?.heading}
             </h1>
             <p>
-              {translate('aboutTopText')}
+              {aboutLeads?.description}
             </p>
         </Flex>
        </Flex>
         <Flex className={classes.bannerImageContainer} justify='center'>
-          <img src='https://s3-alpha-sig.figma.com/img/dc5b/abe5/db58a40b24bd3ed43324f319169e007e?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=k9m5BDstrayPFIaEVfSrj70DB6LAPxlm9G03tW18lF30WdiDwYbOWAsOT923jw6Yo3m06h9R7FnVIb0wrLxLucPDfs1x-qSmBMTm0OzieY1-vP5vfW1Re8hq~dYXsrRJlpPRnZVDSkD0mZkeD66Nr5~R~6w-bW5tPZuvWOYhtsxiiajwJsW59Jaas2QbktxQUW~YmiAffh2lmmguquukRxtPJPNFKVMzR-k9OZw~HvEgJDKUskbjOd-0hpU4TaCvBHuN2kUIBTKBui7UUmdhtFneMFIM9dlSJTjHBCfd0sVKhHKpGNXnEpuTkG~22OYdbgtT-DYgSww6-oP5ZXXn2g__' alt='test' />
+            <img src={aboutLeads?.file?.url as string} alt='test' />
         </Flex>
         <Flex justify='flex-end' >
        <Flex  className={classes.ourPurpose}>
-
           <Flex className={classes.ourPurposeText} gap={20} vertical>
               <h2>
                 {translate('ourpurpose')}
