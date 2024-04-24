@@ -10,7 +10,7 @@ const PartnersComponent = () => {
       <AboutHeading
         heading={'Title for about us or Lorem Ipsum motto'}
         title={'Lectus mauris pulvinar'}
-        desc={
+        description={
           'Commodo interdum at lorem eget amet placerat nunc posuere. Viverra lacus, nisl cursus senectus malesuada leo donec pellentesque. Id faucibus nulla adipiscing pellentesque vulputate quis pulvinar. Sapien est vestibulum in porttitor volutpat.'
         }
         buttonFirst='Became a partner'

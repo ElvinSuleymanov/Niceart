@@ -33,4 +33,32 @@ export const useAboutHeadingStyles = createUseStyles({
      width:'80%'
     },
   },
+  miniTitle: {
+    color: colors.greenMain,
+    fontSize: rem(16),
+    lineHeight: rem(21),
+    fontWeight: 600,
+    textAlign: 'center',
+  },
+  title: {
+    color: colors.textMain,
+    fontSize: rem(36),
+    lineHeight: rem(46),
+    fontWeight: 700,
+    width: '80%',
+    textAlign: 'left',
+    [breakpoint(768)]: {
+      fontSize: rem(30),
+      lineHeight: rem(26),
+
+    },
+  },
+  desc: {
+    color: colors.textMain,
+    fontSize: rem(16),
+    lineHeight: rem(22),
+    textAlign: 'left',
+    width: '100%',
+    padding: `${rem(20)} ${rem(0)}`,
+  },
 });

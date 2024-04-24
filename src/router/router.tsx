@@ -9,6 +9,7 @@ import UsersComponent from 'pages/users/users.component';
 import AboutComponent from 'pages/about/about.component';
 import PartnersComponent from 'pages/partners/partners.component';
 import ContactComponent from 'pages/contact/contact.component';
+import { ProductsComponent } from 'pages/products/products.componet';
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             {
                 path:Routes.partners,
                 element:<PartnersComponent/>
+            },
+            {
+                path:Routes.products,
+                element:<ProductsComponent/>
             },
             {
                 path:Routes.contact,

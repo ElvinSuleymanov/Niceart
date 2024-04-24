@@ -1,6 +1,6 @@
 export interface Product {
    about:{
-    id: string;
+    id: number;
     title: string;
     description: string;
    }

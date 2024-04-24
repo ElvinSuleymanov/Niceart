@@ -1,14 +1,11 @@
-// ProductCard.tsx
-
-import { Link } from 'react-router-dom';
-import Button from '../button/button.component';
-import { useProductCardStyles } from './product-card.style';
-import { ProductCardProps } from './product-card.types';
-import { Routes } from 'router/routes';
+import { Link } from "react-router-dom";
+import { useProductCardStyles } from "./product-card.style";
+import { ProductCardProps } from "./product-card.types";
+import { Routes } from "router/routes";
+import ButtonComponent from "../../../../core/shared/button/button.component";
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const classes = useProductCardStyles();
-
   return (
     <div className={`${classes.card}`}>
       <div className={`${classes.cardBody}`}>
@@ -24,14 +21,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <p>{product.features.amount}</p>
           </div>
           <div className={classes.cardData}>
-            <p>Faiz Dəəcəsi(%)</p>
+            <p>Faiz Dəcəsi(%)</p>
             <p>{product.features.comission}</p>
           </div>
         </div>
-        <Link to={`${Routes.productDetail}/${product.about.id}`} >
-          <Button arrow={'right'} variant={'primary'} className={classes.cardButton} >
+        <Link to={`${Routes.productDetail}/${product.about.id}`}>
+          <ButtonComponent
+            arrow={"right"}
+            type={"primary"}
+            className={classes.cardButton}
+          >
             Apply loan
-          </Button>
+          </ButtonComponent>
         </Link>
       </div>
       <div className={`${classes.cardImageZone}`}>

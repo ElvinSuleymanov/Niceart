@@ -1,10 +1,10 @@
 export interface AboutHeadingProps {
-    heading: string;
-    title?: string;
-    desc: string;
-    buttonFirst?: string;
-    buttonSecond?: string;
-    miniTitle?: string;
-    linkPrimary? : string;
-    linkOutline? : string;
-  }
+  heading: string;
+  title?: string;
+  description?: string;
+  buttonFirst?: string;
+  buttonSecond?: string;
+  tag?: string;
+  linkPrimary? : string;
+  linkOutline? : string;
+}
