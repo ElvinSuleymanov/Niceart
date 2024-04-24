@@ -2,8 +2,9 @@ import { FC } from 'react';
 import { useModalStyles } from './modal.style';
 import Button from '../button/button.component';
 import { Link } from 'react-router-dom';
-import { useCompanyCardStyles } from '../company-card/company-card.style';
+import { useCompanyCardStyles } from '../../../pages/partners/components/company-card/company-card.style';
 import { ModalProps } from './modal';
+import ButtonComponent from '../button/button.component';
 
 const CustomModal: FC<ModalProps> = ({ show, onHide, company }) => {
   const classesM = useModalStyles();
@@ -31,13 +32,13 @@ const CustomModal: FC<ModalProps> = ({ show, onHide, company }) => {
         </div>
         <div className={classesM.modalButtons}>
           <Link to={company.site}>
-            <Button variant={'primary'} arrow={'up'}>
+            <ButtonComponent type={'primary'} arrow={'up'}>
               Visit Website
-            </Button>
+            </ButtonComponent>
           </Link>
-          <Button variant={'outline'} onClick={onHide} size={'large'}>
+          <ButtonComponent type={'secondary'} onClick={onHide}>
             Close
-          </Button>
+          </ButtonComponent>
         </div>
       </div>
     </div>

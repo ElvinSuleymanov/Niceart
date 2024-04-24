@@ -35,6 +35,7 @@ const router = createBrowserRouter([
                 path:Routes.partners,
                 element:<PartnersComponent/>
             },
+            
             {
                 path:Routes.contact,
                 element:<ContactComponent/>

@@ -21,7 +21,7 @@ export const useModalStyles = createUseStyles({
     padding: '30px',
     borderRadius: '8px',
     boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-    width: '60%',
+    width: '80%',
     maxeight: '90%',
     overflowY: 'auto',
   },
@@ -52,7 +52,7 @@ export const useModalStyles = createUseStyles({
     [breakpoint(420)]: {
       maxWidth: '100%',
       height: 'auto',
-      flexDirection:'column'
+      flexDirection: 'column',
     },
   },
 });

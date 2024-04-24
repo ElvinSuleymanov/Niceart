@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { useCompanyCardStyles } from './company-card.style';
 import { CompanyCardProps } from './company-card';
-import CustomModal from '../modal/custom-modal.component';
+import CustomModal from '../../../../core/shared/modal/custom-modal.component';
 
 const CompanyCard: FC<CompanyCardProps> = ({ company }) => {
   const classes = useCompanyCardStyles();
@@ -27,11 +27,7 @@ const CompanyCard: FC<CompanyCardProps> = ({ company }) => {
           <button className={classes.companyButton}>E-COMMERCE</button>
         </div>
       </div>
-      <CustomModal
-        company={company}
-        show={isModalOpen}
-        onHide={closeModal}
-      />
+      <CustomModal company={company} show={isModalOpen} onHide={closeModal} />
     </>
   );
 };
