@@ -1,13 +1,16 @@
 import { Breadcrumb, Flex, Form, Input } from 'antd';
 import { HomeIcon } from 'assets/images/icons/home';
 import useLocalization from 'assets/lang';
-import  { useMemo } from 'react';
+import  { useEffect, useMemo } from 'react';
 import { Routes } from 'router/routes';
 import { useContactStyles } from './contact.style';
 import ButtonComponent from 'core/shared/button/button.component';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { LatLngExpression } from 'leaflet';
+import { useContact } from './actions/contact.query';
+import { store } from 'store/store.config';
+import { setContact } from 'store/store.reducer';
 
 const ContactComponent = () => {
 
@@ -26,9 +29,15 @@ const ContactComponent = () => {
           }
       ]
     ), [translate]);
-
+    const {data} = useContact();
+    
     const englandOperaCoordinates:LatLngExpression = useMemo(() => (
         [51.5074, -0.1278]), []);
+   
+    useEffect(() => {
+        if (data) store.dispatch(setContact(data as IResponse));
+    }, [data]);    
+    
   return (
     <div>
         <Breadcrumb items={breadCrumbItems} className='py-30' />
@@ -44,11 +53,14 @@ const ContactComponent = () => {
                         {translate('visitUs')}
                     </h1>
                     <p>
-                        {translate('visitUsText')}
+                        {data && data.record.location}
                     </p>
                     <h1>
                         {translate('emailUs')}
                     </h1>
+                    <p>
+                        {data && data.record.email}
+                    </p>
                 </Flex>
                 <div className={classes.images}>
                         <img src='https://s3-alpha-sig.figma.com/img/7f97/5ce6/f7a17efd8005578ee1a57614258d17c0?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S1oH~i1l9dc-gVhkJSzyqKUN3svqhT74j605J7N6Ok9TJo-8ILvplnJT2YopEx~LoFnvzsOzKUkw-I1TFOwir7HHHuPxLTqU6nb3Jjql0IwQwDvrG-cY797-BzD95Xpx8wLoFQLfS50ADTOQMvF7klJTaHd4pySZfNqCDMj52dui5TgPScwfDmYVXvmTir8wv5fs7HEFWOet0zGjHwlzfKVCxlZPl5AZY4I8xlaPDYzmqi1wHNyMXVI8xr5p5KN7ctIMg3eMteQWj~bWw8HbB9-Hy2bh3vnsGKP8RPpxV9pAntJ8ekcpmBsbmpi4pC99sqMbcGaeF6KMU-dHnyrn1w__' alt='' />
