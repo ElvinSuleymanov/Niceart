@@ -5,8 +5,3 @@ export const getVideoSercice = () => (
     axiosInstance.get(Routes.video)
     .then(data => data.data.record.file)
 );
-
-export const getLeadsService = () => (
-    axiosInstance.get(Routes.leads)
-    .then(data => data.data.record)
-);

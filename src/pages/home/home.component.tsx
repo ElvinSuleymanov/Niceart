@@ -8,8 +8,9 @@ import ButtonComponent from 'core/shared/button/button.component';
 import { ArrowDown, ArrowRight } from 'assets/images/icons/arrows';
 import BannerBg from '../../assets/images/statics/homebanner.jpeg'; 
 import classNames from 'classnames';
-import {  useLeads, useVideo } from './actions/home.query';
+import { useVideo } from './actions/home.query';
 import { PlayButtonIcon } from 'assets/images/icons/play-button';
+import { useLeads } from 'core/common/leads/actions/leads.query';
 function HomeComponent() {
     const translate = useLocalization();
     const classes = useHomePageStyles();
@@ -44,9 +45,11 @@ function HomeComponent() {
 
     const {data:video} = useVideo();
     const {data:leads} = useLeads();
-    console.log(leads);
-    
-    return (
+    const calculatorLeads = useMemo(() => (
+        leads?.find(el => el.id === 4)
+    ), [leads]);
+
+    return (   
         <div className={containerClass}>
             <Breadcrumb items={breadCrumbItems}/>
             <Flex gap={70} align='center' className={classes.bannerTop}>
@@ -59,12 +62,12 @@ function HomeComponent() {
 
                     <ButtonComponent type='primary'>
                         <Flex gap={10} align='center'>
-                        {translate('products')} <ArrowRight/>
+                        {translate('products')} <ArrowRight className={''}/>
                         </Flex>
                     </ButtonComponent>
                     <ButtonComponent type='secondary'>
                         <Flex gap={10} align='center'>
-                            {translate('aboutNicart')} <ArrowDown/>
+                            {translate('aboutNicart')} <ArrowDown className={''}/>
                         </Flex>
                     </ButtonComponent>
                     </Flex>
@@ -119,8 +122,8 @@ function HomeComponent() {
             </Flex>
             <Flex className={classes.loanCalculator} gap={40}>
                 <Flex vertical gap={20} className={classes.loanCalculatorInfo}>
-                    <h1 className={classes.loanTitleSecondary}>{translate('loanTitleSecondary')}</h1>
-                    <h2 className={classes.loanTitle}>{translate('loanTitle')}</h2>
+                    <h1 className={classes.loanTitleSecondary}>{calculatorLeads?.tag}</h1>
+                    <h2 className={classes.loanTitle}>{calculatorLeads?.heading}</h2>
                     <p className={classes.loanText}>{translate('loanText')}</p>
                 </Flex>
                 <Flex vertical gap={20} className='py-20 py-lg-120'>
@@ -166,7 +169,7 @@ function HomeComponent() {
                         </Flex>
                         <ButtonComponent type='primary' className={classes.applyBtn}>
                             <Flex gap={20} align='center' justify='center'>
-                                {translate('applyNow')} <ArrowRight/>
+                                {translate('applyNow')} <ArrowRight className={''}/>
                             </Flex>
                         </ButtonComponent>
                     </Flex>

@@ -1,5 +1,10 @@
 import { ButtonProps } from 'antd';
 
-interface IButtonProps extends ButtonProps {
-    type: 'primary' | 'secondary'
-} 
+interface ButtonStylesProps {
+  size: number;
+}
+  interface IButtonProps extends ButtonProps {
+  type:'primary' | 'secondary',
+  arrow?:'down' | 'right' | 'up' 
+}
+  

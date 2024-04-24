@@ -6,6 +6,12 @@ export const themeConfig: ThemeConfig = {
         controlHeight: 45,
     },
     components: {
+        Button: {
+            colorPrimary:colors.greenMain,
+            colorPrimaryHover:colors.greenMain,
+            colorPrimaryBgHover:colors.greenMain,
+            colorPrimaryActive:colors.greenMain,
+        },
         Slider: {
             colorPrimary:colors.greenMain,
             handleColor:colors.greenMain,
@@ -28,11 +34,5 @@ export const themeConfig: ThemeConfig = {
             colorPrimary:colors.greenMain,
             colorPrimaryHover:colors.greenMain,
         },
-        Button: {
-            colorPrimary:colors.greenMain,
-            colorPrimaryHover:colors.greenMain,
-        }
-
     },
-    
 };

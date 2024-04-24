@@ -70,7 +70,8 @@ bannerAbout: {
     margin:0 + ' auto',
     '@media(max-width:992px)': {
         display:'flex',
-        flexDirection:'column'  
+        flexDirection:'column',
+        alignItems:'center'
     },
     '& img': {
         maxWidth:rem(498),
