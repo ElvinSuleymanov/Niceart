@@ -10,6 +10,7 @@ export const themeConfig: ThemeConfig = {
             colorPrimary:colors.greenMain,
             colorPrimaryHover:colors.greenMain,
             colorPrimaryBgHover:colors.greenMain,
+            colorPrimaryActive:colors.greenMain,
         },
         Slider: {
             colorPrimary:colors.greenMain,
