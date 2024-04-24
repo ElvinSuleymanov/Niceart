@@ -1,37 +1,36 @@
 import { FC } from 'react';
 import { useModalStyles } from './modal.style';
-import Button from '../button/button.component';
 import { Link } from 'react-router-dom';
-import { useCompanyCardStyles } from '../../../pages/partners/components/company-card/company-card.style';
 import { ModalProps } from './modal';
 import ButtonComponent from '../button/button.component';
+import { usePartnersCardStyles } from 'pages/partners/components/partners-card/partners-card.style';
 
-const CustomModal: FC<ModalProps> = ({ show, onHide, company }) => {
+const CustomModal: FC<ModalProps> = ({ show, onHide, partners }) => {
   const classesM = useModalStyles();
-  const classesC = useCompanyCardStyles();
-  if (!show || !company) return null;
+  const classesC = usePartnersCardStyles();
+  if (!show || !partners) return null;
   return (
     <div className={classesM.modal}>
       <div className={classesM.modalContent}>
         <div>
-          <div className={classesC.companyHead}>
+          <div className={classesC.partnersHead}>
             <img
-              src={company.file?.url}
+              src={partners.file?.url}
               className={classesM.modalImage}
-              alt={company.name}
+              alt={partners.name}
             />
             <div>
-              <p className={classesC.companyName}>{company.name}</p>
+              <p className={classesC.partnersName}>{partners.name}</p>
 
-              <button className={classesC.companyButton}>E-COMMERCE</button>
+              <button className={classesC.partnersButton}>E-COMMERCE</button>
             </div>
           </div>
         </div>
         <div className={classesM.modalText}>
-          <p>{company.description}</p>
+          <p>{partners.description}</p>
         </div>
         <div className={classesM.modalButtons}>
-          <Link to={company.site}>
+          <Link to={partners.site}>
             <ButtonComponent type={'primary'} arrow={'up'}>
               Visit Website
             </ButtonComponent>

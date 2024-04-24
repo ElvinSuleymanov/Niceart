@@ -1,5 +1,5 @@
 import { AboutHeading } from 'core/shared/about-heading/about-heading.component';
-import CompanyCard from 'pages/partners/components/company-card/company-card.companent';
+import CompanyCard from 'pages/partners/components/partners-card/partners-card.companent';
 import { useGetPartners } from './actions/partners.query';
 import { useLeads } from 'core/common/leads/actions/leads.query';
 import useLocalization from 'assets/lang';
@@ -21,9 +21,9 @@ const PartnersComponent = () => {
       />
       <div className='row py-50'>
         {partnersData &&
-          partnersData.map((company, index) => (
+          partnersData.map((partners, index) => (
             <div className='col-md-3 col-lg-3 col-sm-6' key={index}>
-              <CompanyCard company={company} />
+              <CompanyCard partners={partners} />
             </div>
           ))}
       </div>

@@ -1,13 +1,11 @@
-
-// company-card.style.ts
 import { createUseStyles } from 'react-jss';
 import colors from 'assets/styles/abstracts/color';
 import { breakpoint, transition } from 'assets/styles/abstracts/mixins';
 import sizes from 'assets/styles/abstracts/sizes';
 const boxShadow = `6px 8px 20px ${colors.fadedBg}`;
 
-export const useCompanyCardStyles = createUseStyles({
-  companyCard: {
+export const usePartnersCardStyles = createUseStyles({
+  partnersCard: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -31,26 +29,26 @@ export const useCompanyCardStyles = createUseStyles({
       height: 'auto',
     },
   },
-  companyHead: {
+  partnersHead: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'flex-start',
     gap: sizes.base,
   },
-  companyImage: {
+  partnersImage: {
     width: sizes.base * 2,
     height: sizes.base * 2,
     objectFit: 'cover',
     borderRadius: '50%',
     minWidth: sizes.base * 2,
   },
-  companyName: {
+  partnersName: {
     marginTop: sizes.base / 2,
     fontSize: sizes.base * 1.125,
     fontWeight: 'bold',
     textAlign: 'center',
   },
-  companyButton: {
+  partnersButton: {
     marginTop: sizes.base / 2,
     backgroundColor: colors.fadedBg,
     color: colors.greenMain,
