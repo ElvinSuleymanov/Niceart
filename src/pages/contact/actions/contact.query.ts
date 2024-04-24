@@ -1,8 +1,14 @@
 import { useQuery } from 'react-query';
-import { getContactService } from './contact.service';
+import { getContactFilesService, getContactService } from './contact.service';
 
 export const useContact = () => (
-    useQuery<IResponse, Error>('contact', async () => {
+    useQuery<IContactResponse, Error>('contact', async () => {
        return (await getContactService()).data;
+    })
+);
+
+export const useContactFiles = () => (
+    useQuery<IContactFileResponse, Error>('contactFiles', async () => {
+        return (await getContactFilesService()).data;
     })
 );
