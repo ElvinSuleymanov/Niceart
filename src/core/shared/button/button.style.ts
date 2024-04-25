@@ -26,8 +26,8 @@ export const useCustomButtonstyle = createUseStyles({
     border: `2px solid ${colors.greenMain}`,
     height: rem(49),
     '&:hover': {
-      backgroundColor: colors.white,
-      color: colors.greenMain,
+      backgroundColor: colors.greenMain + '!important',
+      color: colors.white  + '!important',
       border: `2px solid ${colors.greenMain}`,
     },
   },
@@ -57,4 +57,9 @@ export const useCustomButtonstyle = createUseStyles({
     marginTop: '0.5rem',
     marginLeft: '0.5rem',
   },
+  iconPrimary: {
+    '&:hover > *': {
+      color:colors.greenMain
+    }
+  }
 });
