@@ -141,7 +141,7 @@ function HomeComponent() {
                         <Flex vertical >
                             <h1>{translate('loanInterest')}</h1>
                             <Card size='small'>{loanInterest}</Card>
-                            <Slider value={loanInterest} onChange={setInterest}  min={1} max={5000} className={classes.rangeInput}/>
+                            <Slider value={loanInterest} onChange={setInterest}  min={1} max={50} className={classes.rangeInput}/>
                         </Flex>
                     </Flex>
                     <Flex vertical gap={10}>
