@@ -21,18 +21,34 @@ const styles: Styles = {
     maxWidth: rem(1240),
     margin: '0 auto',
     padding: '0 15px',
-  },
-  footerLink:{
-    color:colors.greenMain,
-    textDecoration:'underline'
-  },
-  footerBottom :{
     [breakpoint(768)]: {
-      display:'none'
+      display: 'flex',
+      justifyContent: 'center',
+      gap:rem(20)
     },
-    
+    [breakpoint(992)]: {
+      '& .ant-col': {
+        '& .ant-flex': {
+          alignItems:'center'
+        }
+      }
+    }
+  },
+  footerLink: {
+    cursor: 'pointer',
+    color: colors.textMain,
+    textAlign:'center'
+  },
+  footerCopy: {
+    color: colors.greenMain,
+    textDecoration: 'underline',
+  },
+  footerBottom: {
+    [breakpoint(992)]: {
+      justifyContent:'center',
+      gap:rem(20)
+    }
   }
-  
 };
 
 export const useFooterStyles = createUseStyles(styles);

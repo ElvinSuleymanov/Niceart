@@ -18,6 +18,7 @@ import {
 import { useFooterStyles } from './footer.style';
 import { environment } from 'core/configs/app.config';
 import { Link } from 'react-router-dom';
+import { Routes } from 'router/routes';
 
 const FooterComponent = () => {
   const classes = useFooterStyles();
@@ -29,83 +30,117 @@ const FooterComponent = () => {
     () =>
       classNames({
         [classes.footer]: true,
-        'py-100': true,
-        
+        'pt-50': true,
       }),
     [classes.footer]
   );
 
+  const footerBottomClasses = useMemo(
+    () => (
+      classNames(
+        {
+          'container py-60':true,
+          [classes.footerBottom]:true
+        }
+      )
+    ), [classes.footerBottom]
+  );
   return (
     <div className={classes.footerContainer}>
       <footer className={footerClasses}>
-        <Row className={classes.footerSm}>
-          <Col lg={6} md={12} xs={24}>
-            <Flex vertical gap={20}>
-            <Link  to={"/"}><Logo  /></Link>
+        <Row className={classes.footerSm} >
+          <Col lg={6} md={24} xs={24} className='my-30' >
+            <Flex vertical gap={20} >
+              <Link to={Routes.home}>
+                <Logo />
+              </Link>
               <p>{translate('footerText')}</p>
               <Flex gap={15} align='center'>
-               <Link  to={""}><FacebookIcon /></Link>
-               <Link  to={""}><TwitterIcon /></Link>
-               <Link  to={""}><InstagramIcon /></Link>
-               <Link  to={""}><LinkedinIcon /></Link>
-               <Link  to={""}><YoutubeIcon /></Link>
+                <Link to={'https://www.facebook.com/'}>
+                  <FacebookIcon />
+                </Link>
+                <Link to={'https://twitter.com/'}>
+                  <TwitterIcon />
+                </Link>
+                <Link to={'https://www.instagram.com/'}>
+                  <InstagramIcon />
+                </Link>
+                <Link to={'https://az.linkedin.com/'}>
+                  <LinkedinIcon />
+                </Link>
+                <Link to={'https://youtube.com/'}>
+                  <YoutubeIcon />
+                </Link>
               </Flex>
             </Flex>
           </Col>
 
-          <Col lg={6} md={12} xs={24}></Col>
+          <Col lg={6} md={0} ></Col>
 
-          <Col lg={6} md={12} xs={24}>
-            <Flex vertical gap={15}>
+          <Col lg={6} md={12} >
+            <Flex vertical gap={15} align='center'>
               <Typography.Title level={5}>{translate('site')}</Typography.Title>
-              <Typography.Link style={{cursor:'pointer', color:'black'}} >{translate('homepage')}</Typography.Link>
-              <Typography.Link style={{cursor:'pointer', color:'black'}} >{translate('aboutUs')}</Typography.Link>
-              <Typography.Link style={{cursor:'pointer', color:'black'}} >{translate('products')}</Typography.Link>
-              <Typography.Link style={{cursor:'pointer', color:'black'}}>{translate('partners')}</Typography.Link>
-              <Typography.Link style={{cursor:'pointer', color:'black'}}>{translate('contact')}</Typography.Link>
+              <Link to={Routes.home} className={classes.footerLink}>
+                {translate('homepage')}
+              </Link>
+              <Link to={Routes.about} className={classes.footerLink}>
+                {translate('aboutUs')}
+              </Link>
+              <Link to={Routes.products} className={classes.footerLink}>
+                {translate('products')}
+              </Link>
+              <Link to={Routes.partners} className={classes.footerLink}>
+                {translate('partners')}
+              </Link>
+              <Link to={Routes.contact} className={classes.footerLink}>
+                {translate('contact')}
+              </Link>
             </Flex>
           </Col>
 
-          <Col lg={6} md={12} xs={24}>
+          <Col lg={6} md={12}>
             <Flex vertical gap={15}>
               <Typography.Title level={5}>
                 {translate('contactsUs')}
               </Typography.Title>
-              <Flex gap={10} style={{cursor:'pointer'}}>
+              <Flex gap={10} style={{ cursor: 'pointer' }}>
                 <EnvelopeIcon />
                 contact@company.com
               </Flex>
-              <Flex gap={10} style={{cursor:'pointer'}}>
+              <Flex gap={10} style={{ cursor: 'pointer' }}>
                 <PhoneIcon />
                 (414) 687 - 5892
               </Flex>
-              <Flex gap={10} style={{cursor:'pointer'}}>
+              <Flex gap={10} style={{ cursor: 'pointer' }}>
                 <LocationIcon />
                 {translate('locationOfCompany')}
               </Flex>
             </Flex>
           </Col>
         </Row>
-        <div className={classes.footerBottom}>
-        <Row className="container py-60" >
-          <Col lg={12}>
-            <Typography.Title level={5}>
-              Copyright Ⓒ {date} {projectName}
-            </Typography.Title>
-          </Col>
-          <Col lg={12}>
-            <Flex gap={15}>
-              <Typography>All Rights Reserved</Typography>
-              <Typography style={{color:'#3E6F00', textDecoration:'underline', cursor:'pointer'}}>Terms and Conditions</Typography>
-              <Typography style={{color:'#3E6F00', textDecoration:'underline', cursor:'pointer'}}> Privacy Policy</Typography>
-            </Flex>
-          </Col>
-        </Row>
+        <div>
+          <Row className={footerBottomClasses}>
+            <Col lg={12}>
+              <Typography.Title level={5}>
+                Copyright Ⓒ {date} {projectName}
+              </Typography.Title>
+            </Col>
+            <Col lg={12}>
+              <Flex gap={15}>
+                <Typography>All Rights Reserved</Typography>
+                <Typography className={classes.footerCopy}>
+                  Terms and Conditions
+                </Typography>
+                <Typography className={classes.footerCopy}>
+                  Privacy Policy
+                </Typography>
+              </Flex>
+            </Col>
+          </Row>
         </div>
-        
       </footer>
     </div>
   );
 };
 
-export default FooterComponent; 
+export default FooterComponent;
