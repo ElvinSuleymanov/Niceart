@@ -1,11 +1,11 @@
 import { AboutHeading } from 'core/shared/about-heading/about-heading.component';
 import CompanyCard from 'pages/partners/components/partners-card/partners-card.companent';
-import { useGetPartners } from './actions/partners.query';
+import { usePartners } from './actions/partners.query';
 import { useLeads } from 'core/common/leads/actions/leads.query';
 import useLocalization from 'assets/lang';
 
 const PartnersComponent = () => {
-  const { data: partnersData } = useGetPartners();
+  const { data: partnersData } = usePartners();
   const { data: leadsData } = useLeads();
   const translate = useLocalization();
   const filteredLead = leadsData?.find((lead) => lead.tag === 'Our goal');
