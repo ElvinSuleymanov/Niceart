@@ -8,7 +8,7 @@ import ButtonComponent from 'core/shared/button/button.component';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { LatLngExpression } from 'leaflet';
-import { useContact, useContactFiles } from './actions/contact.query';
+import { useContact, useContactFiles } from '../../core/common/contact/contact.query';
 import { store } from 'store/store.config';
 import { setContact } from 'store/store.reducer';
 
