@@ -28,7 +28,7 @@ import { Product } from "pages/products/products";
 
 const ProductDetailComponent = () => {
   const { productId } = useParams<{ productId: string }>();
-  const { data: products, isLoading, isError } = useProduct();
+  const { data: products} = useProduct();
   const classes = useProductDetailStyles();
   const translate = useLocalization();
 
@@ -72,10 +72,14 @@ const ProductDetailComponent = () => {
       <Flex className={flexClasses} justify="space-between">
         <Flex vertical gap={10}>
           <h2 className={classes.titleSm}>{translate("aboutLoan")}</h2>
-          <h1 className={classes.titleSecondary}>{product?.about.title || translate("loanTitle")}</h1>
+          <h1 className={classes.titleSecondary}>
+            {product?.about.title || translate("loanTitle")}
+          </h1>
         </Flex>
         <Flex align="center">
-          <p className={classes.text}>{product?.about.description || translate("productDetailText")}</p>
+          <p className={classes.text}>
+            {product?.about.description || translate("productDetailText")}
+          </p>
         </Flex>
       </Flex>
       <Row className="mb-150">
@@ -119,14 +123,14 @@ const ProductDetailComponent = () => {
 
       <Flex className={classes.loanCalculator} gap={40}>
         <Flex vertical gap={20} className={classes.loanCalculatorInfo}>
-          <h1 className={classes.loanTitleSecondary}>
-            {translate("loanTitleSecondary")}
-          </h1>
-          <h2 className={classes.loanTitle}>{translate("loanTitle")}</h2>
-          <p className={classes.loanText}>{translate("loanText")}</p>
+          <h1 className={classes.loanTitleSecondary}>{translate("loanTitleSecondary")}</h1>
+          <h2 className={classes.loanTitle}>{product?.about.title}</h2>
+          <p className={classes.loanText}>
+            {product?.about.description}
+          </p>
         </Flex>
         <Flex vertical gap={20} className="py-20 py-lg-120">
-          <Flex gap={20} className={classes.inputCredentialsContainer}>
+          <Flex className={classes.inputCredentialsContainer}>
             <Flex vertical>
               <h1>{translate("loanAmount")}</h1>
               <Card size="small">{loanAmount}</Card>
@@ -156,7 +160,7 @@ const ProductDetailComponent = () => {
                 value={loanInterest}
                 onChange={setInterest}
                 min={1}
-                max={5000}
+                max={50}
                 className={classes.rangeInput}
               />
             </Flex>
