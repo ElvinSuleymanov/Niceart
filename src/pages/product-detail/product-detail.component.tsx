@@ -69,24 +69,24 @@ const ProductDetailComponent = () => {
         </Flex>
         <Row className='mb-150'>
           <Col lg={8} md={12} xs={24}>
-            <Flex justify='center' align='center'>
+            {/* <Flex justify='center' align='center'> */}
               {/* <DetailComponent icon={<WalletIcon/>} title={translate('loanAmount')} value={'Min. 5 000 - max. 500 000'}/> */}
-            </Flex>
+            {/* </Flex> */}
           </Col>
           <Col lg={8} md={12} xs={24}>
-          <Flex justify='center' align='center'>
+          {/* <Flex justify='center' align='center'> */}
               {/* <DetailComponent icon={<InterestIcon/>} title={translate('loanDuration')} value={'Min. 15'}/> */}
-          </Flex>
+          {/* </Flex> */}
           </Col>
           <Col lg={8} md={12} xs={24}>
-            <Flex justify='center' align='center'>
+            {/* <Flex justify='center' align='center'> */}
               {/* <DetailComponent icon={<CalendarIcon/>} title={translate('loanInterest')} value={'Min. 8 - max. 120'}/> */}
-            </Flex>
+            {/* </Flex> */}
           </Col>
           <Col lg={8} md={12} xs={24} className='mt-60'>
-            <Flex justify='center' align='center'>
+            {/* <Flex justify='center' align='center'> */}
                 {/* <DetailComponent icon={<ComissionIcon/>} title={translate('loanComission')} value={'Min. 15'}/> */}
-            </Flex>
+            {/* </Flex> */}
           </Col>
         </Row>
 
