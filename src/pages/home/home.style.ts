@@ -1,5 +1,6 @@
 import colors from 'assets/styles/abstracts/color';
 import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 import sizes from 'assets/styles/abstracts/sizes';
 import { createUseStyles, Styles } from 'react-jss';
 
@@ -16,6 +17,20 @@ title: {
         textAlign:'center',
         fontSize:rem(55)
     }
+},
+playBtn: {
+position:'absolute',
+left:rem(10),
+bottom:rem(10),
+cursor:'pointer'
+},
+imageContainer: {
+position:'relative'
+},
+video: {
+    maxWidth:rem(1028),
+    width:sizes.full,
+    margin:0 + ' auto',
 },
 text: {
     lineHeight:rem(22),
@@ -56,7 +71,8 @@ bannerAbout: {
     margin:0 + ' auto',
     '@media(max-width:992px)': {
         display:'flex',
-        flexDirection:'column'  
+        flexDirection:'column',
+        alignItems:'center'
     },
     '& img': {
         maxWidth:rem(498),
@@ -105,6 +121,9 @@ loanCalculator: {
     paddingLeft:'30%',
     marginLeft:'auto',
     position:'relative',
+    [breakpoint(1187)]: {
+        paddingLeft:'35%',
+    },
     '@media(max-width:992px)': {
         padding:rem(0),
         flexDirection:'column',
@@ -115,6 +134,9 @@ loanCalculator: {
 loanText: {
     width:rem(414), 
     color:colors.textMain,
+    [breakpoint(1187)]: {
+        width:rem(300)
+    },
     '@media(max-width:768px)': {
         width:'auto'
     }
@@ -133,8 +155,7 @@ loanTitle: {
     }
 },
 rangeInput: {
-    maxWidth:rem(226),
-    width:sizes.full,
+    width:rem(190),
     marginTop:rem(-5),
     '@media(max-width:768px)': {
         width:'auto'
@@ -152,10 +173,14 @@ loanCalculatorInfo: {
         position:'relative',
         left:'auto',
         top:'auto',
+    },
+    [breakpoint(1187)]: {
+        left:'0%'
     }
 },
 applyBtn: {
     width:rem(320),
+    marginRight:rem(0)
 },
 inputCredentials: {
     maxWidth:rem(320),
