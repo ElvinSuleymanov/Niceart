@@ -100,12 +100,13 @@ const HeaderComponent = () => {
             gap={40}
             className='col-6 p-0 gap-10 d-none d-lg-flex'
           >
-            {navigations.map((nav) => {
+            {navigations.map((nav, key) => {
               let isActiveRoute;
 
               return (
                 <NavLink
                   to={nav.url}
+                  key={key}
                   className={({ isActive }) => {
                     isActiveRoute = isActive;
                     return navActivation({ isActive });
@@ -130,8 +131,8 @@ const HeaderComponent = () => {
           gap={40}
           className={classes.innerMenu}
         >
-          {navigations.map((nav) => (
-            <NavLink to={nav.url} className={navActivation}>
+          {navigations.map((nav, key) => (
+            <NavLink to={nav.url} key={key} className={navActivation}>
               {nav.text}
             </NavLink>
           ))}
