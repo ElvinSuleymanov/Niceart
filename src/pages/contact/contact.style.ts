@@ -51,7 +51,7 @@ const styles:Styles = {
            '&:nth-child(3)': {
                 position:'absolute',
                 right:rem(40),
-                bottom:rem(-40),
+                bottom:rem(-50),
                 zIndex:5,
 
                 '@media(max-width:600px)': {
@@ -69,7 +69,7 @@ const styles:Styles = {
            },
            '&:nth-child(2)': {
                 position:'absolute',
-                top:rem(0),
+                top:rem(-40),
                 left:rem(40),
                 '@media(max-width:600px)': {
                     top:rem(70),

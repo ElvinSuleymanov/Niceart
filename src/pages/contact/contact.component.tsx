@@ -1,13 +1,16 @@
 import { Breadcrumb, Flex, Form, Input } from 'antd';
 import { HomeIcon } from 'assets/images/icons/home';
 import useLocalization from 'assets/lang';
-import  { useMemo } from 'react';
+import  { useEffect, useMemo } from 'react';
 import { Routes } from 'router/routes';
 import { useContactStyles } from './contact.style';
 import ButtonComponent from 'core/shared/button/button.component';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { LatLngExpression } from 'leaflet';
+import { useContact, useContactFiles } from '../../core/common/contact/contact.query';
+import { store } from 'store/store.config';
+import { setContact } from 'store/store.reducer';
 
 const ContactComponent = () => {
 
@@ -26,9 +29,16 @@ const ContactComponent = () => {
           }
       ]
     ), [translate]);
+    const {data:contact} = useContact();
+    const {data:contactFiles} = useContactFiles();
 
     const englandOperaCoordinates:LatLngExpression = useMemo(() => (
         [51.5074, -0.1278]), []);
+   
+    useEffect(() => {
+        if (contact) store.dispatch(setContact(contact as IContactResponse));
+    }, [contact]);    
+            
   return (
     <div>
         <Breadcrumb items={breadCrumbItems} className='py-30' />
@@ -44,17 +54,21 @@ const ContactComponent = () => {
                         {translate('visitUs')}
                     </h1>
                     <p>
-                        {translate('visitUsText')}
+                        {contact && contact.record.location}
                     </p>
                     <h1>
                         {translate('emailUs')}
                     </h1>
+                    <p>
+                        {contact && contact.record.email}
+                    </p>
                 </Flex>
                 <div className={classes.images}>
-                        <img src='https://s3-alpha-sig.figma.com/img/7f97/5ce6/f7a17efd8005578ee1a57614258d17c0?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S1oH~i1l9dc-gVhkJSzyqKUN3svqhT74j605J7N6Ok9TJo-8ILvplnJT2YopEx~LoFnvzsOzKUkw-I1TFOwir7HHHuPxLTqU6nb3Jjql0IwQwDvrG-cY797-BzD95Xpx8wLoFQLfS50ADTOQMvF7klJTaHd4pySZfNqCDMj52dui5TgPScwfDmYVXvmTir8wv5fs7HEFWOet0zGjHwlzfKVCxlZPl5AZY4I8xlaPDYzmqi1wHNyMXVI8xr5p5KN7ctIMg3eMteQWj~bWw8HbB9-Hy2bh3vnsGKP8RPpxV9pAntJ8ekcpmBsbmpi4pC99sqMbcGaeF6KMU-dHnyrn1w__' alt='' />
-                        <img src='https://s3-alpha-sig.figma.com/img/4afd/d3b0/05cf3b308c6ca63eb5f4cccba78c3a8a?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c6TaRJTZc8TYXxoTeGlo4XgwGTVbk1DSO5yag8wPdffG5mSjfcfN-7Cmw0njsK3aaokAXcw9li9UZQDQm552VR288PySlm3kRJkrY8WlbN7LOERYes1QjnWF5WfdxKLw6EUwSCy7Z05cnfbj-mYkXCtofGo9Vxp5xw9gUl71L~9Y6FjZC9GKztfgNJOJ3O~2ZRbC1yvTViONYA2NIo2i-Xb7WkSCdTE~RRbRuYYzJlpyHJnCtrI6X9OQfWK9TDb8Zz6rzPn1grcFujs4odb6HBpvjCsstckpygAYl07DsdtUzwxRGnj3N6iTmrXL~Vl35kPh7ZBqByGAHHskkpjwQQ__' alt='' />
-                        <img src='https://s3-alpha-sig.figma.com/img/e413/4d99/299b72f97845ec0b5b8261cbe992e006?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UpaR3WFgBwfzSh~l8zkn-FVZY4x6uc3VsP0K7PUmT-nHuNuaF~qu7v23u4kAGSXivYRpqJlxi9vbe~KX0RbkEQvRQfoEpieHstf~-8tf9NYaPzUpYCpPVusloYl9gO6AqRbvnh9nULOAhv-J6R3wsPhfWsR66miYrHaCSNp4R6s126XW9IZ~GtP0AwBzdy8U8PbwWbXiAGLZVVBzA1DLudmlhktbxhDL3wwfLMoXRN6YHqvuo6SMz0M6P8As9MxvkaHAxJ9JIvIvD0J0QAzjTLoIhx7kVJx88FOoidVAdc5Nnb18zpGetRHYXjLOb02hBB03l764K7SRZ-8AkPymUw__' alt='' />
-                        <img src='https://s3-alpha-sig.figma.com/img/4afd/d3b0/05cf3b308c6ca63eb5f4cccba78c3a8a?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c6TaRJTZc8TYXxoTeGlo4XgwGTVbk1DSO5yag8wPdffG5mSjfcfN-7Cmw0njsK3aaokAXcw9li9UZQDQm552VR288PySlm3kRJkrY8WlbN7LOERYes1QjnWF5WfdxKLw6EUwSCy7Z05cnfbj-mYkXCtofGo9Vxp5xw9gUl71L~9Y6FjZC9GKztfgNJOJ3O~2ZRbC1yvTViONYA2NIo2i-Xb7WkSCdTE~RRbRuYYzJlpyHJnCtrI6X9OQfWK9TDb8Zz6rzPn1grcFujs4odb6HBpvjCsstckpygAYl07DsdtUzwxRGnj3N6iTmrXL~Vl35kPh7ZBqByGAHHskkpjwQQ__' alt='' />
+                    {
+                        contactFiles?.record.map(el => (
+                            <img src={el.url} alt='' />
+                        ))
+                    }
                 </div>
             </Flex>
             <Flex className={classes.formContainer} gap={70} justify='space-between'>

@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {IState} from './store';
+import {IContact, IState} from './store';
 import {az} from '../assets/lang/az';
 import {en} from '../assets/lang/en';
 import {ru} from '../assets/lang/ru';
@@ -26,7 +26,8 @@ const initialState: IState = {
         }
     ],
     locale: az,
-    user: null
+    user: null,
+    contact:null
 };
 
 export const rootSlice = createSlice({
@@ -51,10 +52,13 @@ export const rootSlice = createSlice({
         setUser: (state: IState, action: PayloadAction<any>) => {
             // state.user = jwtDecode(action.payload);
             state.user = 'user';
+        },
+        setContact:(state: IState, action:PayloadAction<IContact>) => {
+            state.contact = action.payload;
         }
     },
 });
 
-export const {setLoader, toggleLeftMenu, setLocale, setUser} = rootSlice.actions;
+export const {setLoader, toggleLeftMenu, setLocale, setUser, setContact} = rootSlice.actions;
 
 export default rootSlice.reducer;

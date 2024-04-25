@@ -19,6 +19,7 @@ import { useFooterStyles } from './footer.style';
 import { environment } from 'core/configs/app.config';
 import { Link } from 'react-router-dom';
 import { Routes } from 'router/routes';
+import { useContact } from 'core/common/contact/contact.query';
 
 const FooterComponent = () => {
   const classes = useFooterStyles();
@@ -45,6 +46,9 @@ const FooterComponent = () => {
       )
     ), [classes.footerBottom]
   );
+
+  const {data:contacts} = useContact();
+
   return (
     <div className={classes.footerContainer}>
       <footer className={footerClasses}>
@@ -105,15 +109,15 @@ const FooterComponent = () => {
               </Typography.Title>
               <Flex gap={10} style={{ cursor: 'pointer' }}>
                 <EnvelopeIcon />
-                contact@company.com
+                {contacts?.record.email}
               </Flex>
               <Flex gap={10} style={{ cursor: 'pointer' }}>
                 <PhoneIcon />
-                (414) 687 - 5892
+                {contacts?.record.phone}
               </Flex>
               <Flex gap={10} style={{ cursor: 'pointer' }}>
                 <LocationIcon />
-                {translate('locationOfCompany')}
+                {contacts?.record.location}
               </Flex>
             </Flex>
           </Col>
