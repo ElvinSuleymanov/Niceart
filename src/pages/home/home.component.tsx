@@ -126,8 +126,8 @@ function HomeComponent() {
                     <h2 className={classes.loanTitle}>{calculatorLeads?.heading}</h2>
                     <p className={classes.loanText}>{translate('loanText')}</p>
                 </Flex>
-                <Flex vertical gap={20} className='py-20 py-lg-120'>
-                    <Flex gap={20} className={classes.inputCredentialsContainer}>
+                <Flex vertical  gap={20} className='py-20 py-lg-120'>
+                    <Flex  className={classes.inputCredentialsContainer}>
                         <Flex vertical >
                             <h1>{translate('loanAmount')}</h1>
                             <Card size='small'>{loanAmount}</Card>
