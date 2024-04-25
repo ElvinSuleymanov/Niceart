@@ -47,12 +47,12 @@ function HomeComponent() {
 
                     <ButtonComponent type='primary'>
                         <Flex gap={10} align='center'>
-                        {translate('products')} <ArrowRight/>
+                        {translate('products')} <ArrowRight className={''}/>
                         </Flex>
                     </ButtonComponent>
                     <ButtonComponent type='secondary'>
                         <Flex gap={10} align='center'>
-                            {translate('aboutNicart')} <ArrowDown/>
+                            {translate('aboutNicart')} <ArrowDown className={''}/>
                         </Flex>
                     </ButtonComponent>
                     </Flex>
@@ -137,7 +137,7 @@ function HomeComponent() {
                         </Flex>
                         <ButtonComponent type='primary' className={classes.applyBtn}>
                             <Flex gap={20} align='center' justify='center'>
-                                {translate('applyNow')} <ArrowRight/>
+                                {translate('applyNow')} <ArrowRight className={''}/>
                             </Flex>
                         </ButtonComponent>
                     </Flex>
