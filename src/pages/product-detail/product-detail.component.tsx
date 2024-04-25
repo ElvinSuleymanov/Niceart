@@ -7,11 +7,11 @@ import { Routes } from 'router/routes';
 import { useProductDetailStyles } from './product-detail.style';
 import BuildersImg from '../../assets/images/statics/homeBuilders.jpg';
 import classNames from 'classnames';
-import DetailComponent from './components/detail/detail.component';
 import { WalletIcon } from 'assets/images/icons/wallet';
-import { InterestIcon } from 'assets/images/icons/interest';
+// import DetailComponent from './components/detail/detail.component';
+// import { InterestIcon } from 'assets/images/icons/interest';
+// import { ComissionIcon } from 'assets/images/icons/comission';
 import { CalendarIcon } from 'assets/images/icons/calendar';
-import { ComissionIcon } from 'assets/images/icons/comission';
 import { ArrowRight } from 'assets/images/icons/arrows';
 import ButtonComponent from 'core/shared/button/button.component';
 
@@ -70,22 +70,22 @@ const ProductDetailComponent = () => {
         <Row className='mb-150'>
           <Col lg={8} md={12} xs={24}>
             <Flex justify='center' align='center'>
-              <DetailComponent icon={<WalletIcon/>} title={translate('loanAmount')} value={'Min. 5 000 - max. 500 000'}/>
+              {/* <DetailComponent icon={<WalletIcon/>} title={translate('loanAmount')} value={'Min. 5 000 - max. 500 000'}/> */}
             </Flex>
           </Col>
           <Col lg={8} md={12} xs={24}>
           <Flex justify='center' align='center'>
-              <DetailComponent icon={<InterestIcon/>} title={translate('loanDuration')} value={'Min. 15'}/>
+              {/* <DetailComponent icon={<InterestIcon/>} title={translate('loanDuration')} value={'Min. 15'}/> */}
           </Flex>
           </Col>
           <Col lg={8} md={12} xs={24}>
             <Flex justify='center' align='center'>
-              <DetailComponent icon={<CalendarIcon/>} title={translate('loanInterest')} value={'Min. 8 - max. 120'}/>
+              {/* <DetailComponent icon={<CalendarIcon/>} title={translate('loanInterest')} value={'Min. 8 - max. 120'}/> */}
             </Flex>
           </Col>
           <Col lg={8} md={12} xs={24} className='mt-60'>
             <Flex justify='center' align='center'>
-                <DetailComponent icon={<ComissionIcon/>} title={translate('loanComission')} value={'Min. 15'}/>
+                {/* <DetailComponent icon={<ComissionIcon/>} title={translate('loanComission')} value={'Min. 15'}/> */}
             </Flex>
           </Col>
         </Row>
@@ -140,7 +140,7 @@ const ProductDetailComponent = () => {
                         </Flex>
                         <ButtonComponent type='primary' className={classes.applyBtn}>
                             <Flex gap={20} align='center' justify='center'>
-                                {translate('applyNow')} <ArrowRight/>
+                                {translate('applyNow')} <ArrowRight className={''}/>
                             </Flex>
                         </ButtonComponent>
                     </Flex>

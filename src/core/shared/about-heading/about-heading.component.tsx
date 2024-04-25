@@ -27,7 +27,7 @@ export const AboutHeading: FC<AboutHeadingProps> = ({
         <div className={classes.buttons}>
           {buttonFirst && (
             <Link to={Routes.partners}>
-              <ButtonComponent type={'primary'} arrow='right' >
+              <ButtonComponent type={'primary'} arrow='right'>
                 {buttonFirst}
               </ButtonComponent>
             </Link>

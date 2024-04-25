@@ -83,14 +83,14 @@ footerText:'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam',
     ourStrategyText:`Id duis id turpis mi 
     quisque. Nulla.`,
     strategyText:'Pulvinar amet ullamcorper nec nullam accumsan, iaculis risus. Feugiat nulla in imperdiet tellus sit lobortis. Cursus adipiscing aliquam dignissim.',
-    productsMainTitle: 'Title for Products or Lorem Ipsum motto',
-    productsText:'Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam. ',
+    productsHeading: 'Title for Products or Lorem Ipsum motto',
+    partnersDescription:'Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam. ',
     productsTitle:`Lectus mauris pulvinar
     sit?`,
     productLoanTitle:'Magna feugiat morbi felis aliquam aenean.',
     productLoanText:'Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.',
     durationMonth:'Müddət (Ay)',
-    price:'Məbləğ',
+    price:'Məbləğ (AZN)',
     interestRate:'Faiz dərəcəsi (%)',
 
 
