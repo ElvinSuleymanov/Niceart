@@ -14,7 +14,6 @@ import { setContact } from 'store/store.reducer';
 
 const ContactComponent = () => {
 
-
     const classes = useContactStyles();
     const translate = useLocalization();
     const breadCrumbItems = useMemo(() => (

@@ -1,44 +1,45 @@
-import { FC } from 'react';
-import { useModalStyles } from './modal.style';
-import Button from '../button/button.component';
-import { Link } from 'react-router-dom';
-import { useCompanyCardStyles } from '../company-card/company-card.style';
-import { ModalProps } from './modal';
+import { FC } from "react";
+import { useModalStyles } from "./modal.style";
+import { Link } from "react-router-dom";
+import { ModalProps } from "./modal";
+import ButtonComponent from "../button/button.component";
+import { usePartnersCardStyles } from "pages/partners/components/partners-card/partners-card.style";
+import { Flex } from "antd";
 
-const CustomModal: FC<ModalProps> = ({ show, onHide, company }) => {
+const CustomModal: FC<ModalProps> = ({ show, onHide, partners }) => {
   const classesM = useModalStyles();
-  const classesC = useCompanyCardStyles();
-  if (!show || !company) return null;
+  const classesC = usePartnersCardStyles();
+  if (!show || !partners) return null;
   return (
     <div className={classesM.modal}>
       <div className={classesM.modalContent}>
         <div>
-          <div className={classesC.companyHead}>
+          <div className={classesC.partnersHead}>
             <img
-              src={company.file?.url}
+              src={partners.file?.url}
               className={classesM.modalImage}
-              alt={company.name}
+              alt={partners.name}
             />
             <div>
-              <p className={classesC.companyName}>{company.name}</p>
+              <p className={classesC.partnersName}>{partners.name}</p>
 
-              <button className={classesC.companyButton}>E-COMMERCE</button>
+              <button className={classesC.partnersButton}>{partners.tag}</button>
             </div>
           </div>
         </div>
         <div className={classesM.modalText}>
-          <p>{company.description}</p>
+          <p>{partners.description}</p>
         </div>
-        <div className={classesM.modalButtons}>
-          <Link to={company.site}>
-            <Button variant={'primary'} arrow={'up'}>
+        <Flex align="center" wrap="nowrap" className={classesM.modalButtons} gap={10}>
+          <Link to={partners.site} className="w-100 ">
+            <ButtonComponent type={"primary"} block arrow={"up"}>
               Visit Website
-            </Button>
+            </ButtonComponent>
           </Link>
-          <Button variant={'outline'} onClick={onHide} size={'large'}>
+          <ButtonComponent block type={"secondary"} onClick={onHide}>
             Close
-          </Button>
-        </div>
+          </ButtonComponent>
+        </Flex>
       </div>
     </div>
   );

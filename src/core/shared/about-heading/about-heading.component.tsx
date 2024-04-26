@@ -14,8 +14,8 @@ export const AboutHeading: FC<AboutHeadingProps> = ({
 }) => {
   const classes = useAboutHeadingStyles();
   return (
-    <div className="row py-40">
-      <div className="col-md-6 col-sm-12 ">
+    <div className='row py-40'>
+      <div className='col-md-6 col-sm-12 '>
         <h2 className={classes.heading}>{heading}</h2>
       </div>
       <div className='col-md-6 col-sm-12'>
@@ -27,7 +27,7 @@ export const AboutHeading: FC<AboutHeadingProps> = ({
         <div className={classes.buttons}>
           {buttonFirst && (
             <Link to={Routes.partners}>
-              <ButtonComponent type={'primary'} arrow='right'>
+              <ButtonComponent type={"primary"} arrow='up'>
                 {buttonFirst}
               </ButtonComponent>
             </Link>
