@@ -1,8 +1,7 @@
 import colors from 'assets/styles/abstracts/color';
 import { rem } from 'assets/styles/abstracts/functions';
-import { transition } from 'assets/styles/abstracts/mixins';
+import { breakpoint, transition } from 'assets/styles/abstracts/mixins';
 import sizes from 'assets/styles/abstracts/sizes';
-import { color } from 'framer-motion';
 import { createUseStyles, Styles } from 'react-jss';
 
 const styles: Styles = {
@@ -53,7 +52,7 @@ const styles: Styles = {
     position: 'fixed',
     top: rem(-300),
     right: rem(-300),
-    '@media(max-width:992px)': {
+    [breakpoint(992)] : {
       width: rem(650),
       height: rem(650),
     },

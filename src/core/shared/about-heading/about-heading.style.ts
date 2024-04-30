@@ -12,6 +12,7 @@ export const useAboutHeadingStyles = createUseStyles({
   },
   heading: {
     color: colors.greenMain,
+    fontWeight: 700,
     fontSize: rem(72),
     marginBottom: rem(10),
     [breakpoint(768)]: {
@@ -44,7 +45,7 @@ export const useAboutHeadingStyles = createUseStyles({
     color: colors.textMain,
     fontSize: rem(36),
     lineHeight: rem(46),
-    fontWeight: 700,
+    fontWeight: 600,
     width: '80%',
     textAlign: 'left',
     [breakpoint(768)]: {

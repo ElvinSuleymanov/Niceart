@@ -13,7 +13,7 @@ title: {
     width:sizes.full,
     maxWidth:rem(550),
     height:rem(200),
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         textAlign:'center',
         fontSize:rem(55)
     }
@@ -35,7 +35,7 @@ video: {
 text: {
     lineHeight:rem(22),
     marginBottom:rem(30),
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         flexDirection:'column',
         alignItems:'center',
         textAlign:'center'
@@ -59,7 +59,7 @@ banner: {
     backgroundColor:colors.fadedBg
 }, 
 bannerTop: {
-'@media(max-width:992px)': {
+    [breakpoint(992)]:  {
     flexDirection:'column',
     alignItems:'center'
 }
@@ -69,7 +69,7 @@ bannerAbout: {
     maxWidth:rem(1028),
     width:sizes.full,
     margin:0 + ' auto',
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         display:'flex',
         flexDirection:'column',
         alignItems:'center'
@@ -97,7 +97,7 @@ bannerAbout: {
 },
 propertyLoan: {
     marginTop:rem(150),
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         flexDirection:'column',
         alignItems:'center',
         gap:rem(20)
@@ -124,7 +124,7 @@ loanCalculator: {
     [breakpoint(1187)]: {
         paddingLeft:'35%',
     },
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         padding:rem(0),
         flexDirection:'column',
         alignItems:'center',
@@ -137,7 +137,7 @@ loanText: {
     [breakpoint(1187)]: {
         width:rem(300)
     },
-    '@media(max-width:768px)': {
+    [breakpoint(768)]: {
         width:'auto'
     }
 },
@@ -150,14 +150,14 @@ loanTitle: {
     color:colors.textMain,
     fontSize:rem(44),
     width:rem(374),
-    '@media(max-width:768px)': {
+    [breakpoint(768)]:  {
         width:'auto'
     }
 },
 rangeInput: {
     width:rem(190),
     marginTop:rem(-5),
-    '@media(max-width:768px)': {
+    [breakpoint(768)]:  {
         width:'auto'
     }
 },
@@ -169,7 +169,7 @@ loanCalculatorInfo: {
     position:'absolute',
     left:'-15%',
     top:rem(100),
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         position:'relative',
         left:'auto',
         top:'auto',
@@ -187,12 +187,12 @@ inputCredentials: {
     width:sizes.full
 },
 inputCredentialsContainer: {
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         flexDirection:'column'
     }
 },
 flexColMobile: {
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
     flexDirection:'column',
     alignItems:'center',
     gap:rem(20)

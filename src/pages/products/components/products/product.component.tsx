@@ -26,7 +26,7 @@ const ProductComponent = ({interestRateRange, priceRange, duration, text, title,
               <Flex justify='space-between' gap={20}>
                 <Flex vertical gap={20}>
                       <h1>
-                        {translate('durationMonth')}
+                        {translate('duration_month')}
                       </h1>
                       <p>
                         {duration}
@@ -42,7 +42,7 @@ const ProductComponent = ({interestRateRange, priceRange, duration, text, title,
                 </Flex>
                 <Flex vertical gap={20}>
                     <h1>
-                      {translate('interestRate')}
+                      {translate('interest_rate')}
                     </h1>
                     <p>
                       {interestRateRange}
@@ -52,7 +52,7 @@ const ProductComponent = ({interestRateRange, priceRange, duration, text, title,
               <ButtonComponent type='primary' className={classes.applyBtn}>
                 <Flex gap={15}>
                     {translate('loanTitleSecondary')}
-                    <ArrowRight/>
+                    <ArrowRight className={''}/>
                 </Flex>
               </ButtonComponent>
           </Flex>

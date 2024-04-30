@@ -87,9 +87,9 @@ footerText:'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam',
     productsTitle: 'Title for Products or Lorem Ipsum motto',
     productLoanTitle:'Magna feugiat morbi felis aliquam aenean.',
     productLoanText:'Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.',
-    durationMonth:'Müddət (Ay)',
+    duration_month:'Müddət (Ay)',
     price:'Məbləğ (AZN)',
-    interestRate:'Faiz dərəcəsi (%)',
+    interest_rate:'Faiz dərəcəsi (%)',
 
 
     //partnters

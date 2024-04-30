@@ -1,5 +1,6 @@
 import colors from 'assets/styles/abstracts/color';
 import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 import sizes from 'assets/styles/abstracts/sizes';
 import { createUseStyles, Styles } from 'react-jss';
 
@@ -7,7 +8,7 @@ const styles:Styles = {
 container: {
     backgroundColor:colors.fadedBg,
     padding:rem(40),
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
        padding:rem(22)
     },
     '& .ant-flex': {

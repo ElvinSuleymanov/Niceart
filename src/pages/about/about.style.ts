@@ -1,5 +1,6 @@
 import colors from 'assets/styles/abstracts/color';
 import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 import sizes from 'assets/styles/abstracts/sizes';
 import { createUseStyles, Styles } from 'react-jss';
 
@@ -8,7 +9,7 @@ const styles:Styles = {
         color:colors.greenMain,
         fontSize:rem(60),
         fontWeight:sizes.boldest,
-        '@media(max-width:992px)': {
+        [breakpoint(992)] : {
             textAlign:'center'
         }
     },
@@ -39,7 +40,7 @@ const styles:Styles = {
         position:'absolute',
         left:rem(-230),
         top:rem(130),
-        '@media(max-width:992px)': {
+        [breakpoint(992)] : {
             position:'relative',
             top:rem(0),
             left:rem(0),
@@ -67,13 +68,13 @@ const styles:Styles = {
         marginLeft:'auto',
         paddingTop:rem(60),
         paddingBottom:rem(60),
-        '@media(max-width:992px)': {
+        [breakpoint(992)] : {
             paddingLeft:rem(0)
         }
     },
     ourPurpose: {
         position:'relative',
-        '@media(max-width:992px)': {
+        [breakpoint(992)] : {
             flexDirection:'column'
         }
     },
@@ -101,7 +102,7 @@ const styles:Styles = {
         marginLeft:'auto'
     },
     mainTitleContainer: {
-        '@media(max-width:992px)': {
+        [breakpoint(992)] : {
             flexDirection:'column',
             alignItems:'center'
         }

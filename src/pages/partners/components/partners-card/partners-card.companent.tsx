@@ -1,8 +1,7 @@
-import { FC, useCallback, useState } from "react";
-import { usePartnersCardStyles } from "./partners-card.style";
-import CustomModal from "../../../../core/shared/modal/custom-modal.component";
-import { PartnersCardProps } from "./partners-card";
-// import { Modal, Flex } from "antd";
+import { FC, useState } from 'react';
+import { usePartnersCardStyles } from './partners-card.style';
+import CustomModal from '../../../../core/shared/modal/custom-modal.component';
+import { PartnersCardProps } from './partners-card';
 
 const PartnerCard: FC<PartnersCardProps> = ({ partners }) => {
   const classes = usePartnersCardStyles();
@@ -14,9 +13,6 @@ const PartnerCard: FC<PartnersCardProps> = ({ partners }) => {
     setIsModalOpen(false);
   };
 
-  // const openModalHandler = useCallback(() => {
-  //   setIsModalOpen(!isModalOpen);
-  // }, [isModalOpen]);
   return (
     <>
       <div onClick={openModal} className={classes.partnersCard}>
@@ -33,24 +29,6 @@ const PartnerCard: FC<PartnersCardProps> = ({ partners }) => {
         </div>
       </div>
       <CustomModal partners={partners} show={isModalOpen} onHide={closeModal} />
-
-      {/* <Modal cancelText='Close' cancelButtonProps={{className:classes.cancelBtn}} open={isModalOpen} >
-          <Flex vertical>
-      
-            <Flex align='center' gap={20}>
-              <img className={classes.image} src={partners.file.url as string}  />
-              <Flex vertical>
-                  {partners.name}
-                  <span>
-                    {partners.tag}
-                  </span>
-              </Flex>
-            </Flex>
-
-            {partners.description}
-          </Flex>
-
-        </Modal> */}
     </>
   );
 };

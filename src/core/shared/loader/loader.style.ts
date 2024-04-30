@@ -1,5 +1,6 @@
 import {createUseStyles} from 'react-jss';
 import colors from 'assets/styles/abstracts/color';
+import { rem } from 'assets/styles/abstracts/functions';
 
 const styles = {
     loader: {
@@ -12,17 +13,17 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ffffff6e',
-        backdropFilter: 'blur(2px)',
+        backgroundColor: colors.fadedBg,
+        backdropFilter: 'blur(3px)',
     },
     inner: {
-        width: '48px',
-        height: '48px',
-        background: colors.alertTextPrimary,
+        width: rem(48),
+        height:  rem(48),
+        background: colors.textMain,
         display: 'inline-block',
         borderRadius: '50%',
         boxSizing: 'border-box',
-        animation: '$animloader 1s ease-in infinite',
+        animation: '$animloader 1.2s ease-in infinite',
     },
     '@keyframes animloader': {
         '0%': {

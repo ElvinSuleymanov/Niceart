@@ -1,10 +1,10 @@
-import { FC } from "react";
-import { useModalStyles } from "./modal.style";
-import { Link } from "react-router-dom";
-import { ModalProps } from "./modal";
-import ButtonComponent from "../button/button.component";
-import { usePartnersCardStyles } from "pages/partners/components/partners-card/partners-card.style";
-import { Flex } from "antd";
+import { FC } from 'react';
+import { useModalStyles } from './modal.style';
+import { Link } from 'react-router-dom';
+import { ModalProps } from './modal';
+import ButtonComponent from '../button/button.component';
+import { usePartnersCardStyles } from 'pages/partners/components/partners-card/partners-card.style';
+import { Flex } from 'antd';
 
 const CustomModal: FC<ModalProps> = ({ show, onHide, partners }) => {
   const classesM = useModalStyles();
@@ -30,13 +30,13 @@ const CustomModal: FC<ModalProps> = ({ show, onHide, partners }) => {
         <div className={classesM.modalText}>
           <p>{partners.description}</p>
         </div>
-        <Flex align="center" wrap="nowrap" className={classesM.modalButtons} gap={10}>
-          <Link to={partners.site} className="w-100 ">
-            <ButtonComponent type={"primary"} block arrow={"up"}>
+        <Flex align='center' wrap='nowrap' className={classesM.modalButtons} gap={10}>
+          <Link to={partners.site} className='w-100 '>
+            <ButtonComponent type={'primary'} block arrow={'up'}>
               Visit Website
             </ButtonComponent>
           </Link>
-          <ButtonComponent block type={"secondary"} onClick={onHide}>
+          <ButtonComponent block type={'secondary'} onClick={onHide}>
             Close
           </ButtonComponent>
         </Flex>

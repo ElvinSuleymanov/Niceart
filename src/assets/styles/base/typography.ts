@@ -5,7 +5,6 @@ import nunitoXBlack from '../../fonts/Nunito/NunitoSans-ExtraBold.ttf';
 import WestTrialBold  from '../../fonts/West/WestTrial-Bold.otf';
 import WestTrialRegular  from '../../fonts/West/WestTrial-Regular.otf';
 import WestTrialMedium  from '../../fonts/West/WestTrial-Medium.otf';
-import WestTrialExtraBold  from '../../fonts/West/WestTrial-ExtraBold.otf';
 
 
 const typography = {

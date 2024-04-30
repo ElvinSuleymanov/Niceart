@@ -3,6 +3,7 @@ import CompanyCard from 'pages/partners/components/partners-card/partners-card.c
 import { usePartners } from './actions/partners.query';
 import { useLeads } from 'core/common/leads/actions/leads.query';
 import useLocalization from 'assets/lang';
+import { Col } from 'antd';
 
 const PartnersComponent = () => {
   const { data: partnersData } = usePartners();
@@ -22,9 +23,9 @@ const PartnersComponent = () => {
       <div className='row py-50'>
         {partnersData &&
           partnersData.map((partners, index) => (
-            <div className='col-md-3 col-lg-3 col-sm-6' key={index}>
+            <Col className='col-md-3 col-lg-3 col-sm-6' key={index}>
               <CompanyCard partners={partners} />
-            </div>
+            </Col>
           ))}
       </div>
     </div>

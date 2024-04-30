@@ -1,15 +1,15 @@
-import colors from "assets/styles/abstracts/color";
-import { rem } from "assets/styles/abstracts/functions";
-import { breakpoint } from "assets/styles/abstracts/mixins";
-import sizes from "assets/styles/abstracts/sizes";
-import { createUseStyles, Styles } from "react-jss";
+import colors from 'assets/styles/abstracts/color';
+import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
+import sizes from 'assets/styles/abstracts/sizes';
+import { createUseStyles, Styles } from 'react-jss';
 
 const styles: Styles = {
   container: {
-    "&:after": {
+    '&:after': {
       content: '""',
-      display: "block",
-      position: "absolute",
+      display: 'block',
+      position: 'absolute',
       top: rem(0),
       right: rem(0),
       left: rem(0),
@@ -18,7 +18,7 @@ const styles: Styles = {
       opacity: 0.09,
       width: sizes.full,
       zIndex: -2,
-      "@media(max-width:992px)": {
+      [breakpoint(992)]: {
         height: rem(870),
       },
     },
@@ -36,16 +36,16 @@ const styles: Styles = {
     fontWeight: sizes.boldest,
     maxWidth: rem(374),
     width: sizes.full,
-    "@media(max-width:992px)": {
-      textAlign: "center",
+    [breakpoint(992)]: {
+      textAlign: 'center',
     },
   },
   titleMain: {
     fontSize: rem(60),
     fontWeight: sizes.boldest,
     color: colors.greenMain,
-    "@media(max-width:992px)": {
-      textAlign: "center",
+    [breakpoint(992)]: {
+      textAlign: 'center',
     },
   },
   text: {
@@ -53,8 +53,8 @@ const styles: Styles = {
     fontSize: rem(16),
     maxWidth: rem(600),
     lineHeight: rem(31),
-    "@media(max-width:992px)": {
-      textAlign: "center",
+    [breakpoint(992)] : {
+      textAlign: 'center',
     },
   },
   titleSm: {
@@ -63,9 +63,9 @@ const styles: Styles = {
     fontWeight: sizes.boldest,
   },
   flexColMobile: {
-    "@media(max-width:992px)": {
-      flexDirection: "column",
-      alignItems: "center",
+    [breakpoint(992)]:  {
+      flexDirection: 'column',
+      alignItems: 'center',
       gap: rem(20),
     },
   },
@@ -102,7 +102,7 @@ banner: {
     backgroundColor:colors.fadedBg
 }, 
 bannerTop: {
-'@media(max-width:992px)': {
+    [breakpoint(992)]:  {
     flexDirection:'column',
     alignItems:'center'
 }
@@ -112,7 +112,7 @@ bannerAbout: {
     maxWidth:rem(1028),
     width:sizes.full,
     margin:0 + ' auto',
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         display:'flex',
         flexDirection:'column',
         alignItems:'center'
@@ -140,7 +140,7 @@ bannerAbout: {
 },
 propertyLoan: {
     marginTop:rem(150),
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         flexDirection:'column',
         alignItems:'center',
         gap:rem(20)
@@ -167,7 +167,7 @@ loanCalculator: {
     [breakpoint(1187)]: {
         paddingLeft:'35%',
     },
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         padding:rem(0),
         flexDirection:'column',
         alignItems:'center',
@@ -180,7 +180,7 @@ loanText: {
     [breakpoint(1187)]: {
         width:rem(300)
     },
-    '@media(max-width:768px)': {
+    [breakpoint(768)]:  {
         width:'auto'
     }
 },
@@ -193,14 +193,14 @@ loanTitle: {
     color:colors.textMain,
     fontSize:rem(44),
     width:rem(374),
-    '@media(max-width:768px)': {
+    [breakpoint(768)]:  {
         width:'auto'
     }
 },
 rangeInput: {
     width:rem(190),
     marginTop:rem(-5),
-    '@media(max-width:768px)': {
+    [breakpoint(768)]:  {
         width:'auto'
     }
 },
@@ -212,7 +212,7 @@ loanCalculatorInfo: {
     position:'absolute',
     left:'-15%',
     top:rem(100),
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         position:'relative',
         left:'auto',
         top:'auto',
@@ -230,7 +230,7 @@ inputCredentials: {
     width:sizes.full
 },
 inputCredentialsContainer: {
-    '@media(max-width:992px)': {
+    [breakpoint(992)]:  {
         flexDirection:'column'
     }
 },

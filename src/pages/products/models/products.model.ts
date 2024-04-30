@@ -16,7 +16,7 @@ export interface Product {
        id: number;
        url: string;
      };
-   };
+   }
 class ProductModel implements Product {
     public about: {
         id: number;
@@ -53,7 +53,7 @@ class ProductModel implements Product {
   }
 
   private _setTitle(title: string ) {
-    this.about.title = title   }
+    this.about.title = title;   }
 
   private _setDescription(description: string ) {
     this.about.description = description;

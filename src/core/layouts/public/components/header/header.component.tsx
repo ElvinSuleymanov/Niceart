@@ -6,7 +6,7 @@ import useLocalization from 'assets/lang';
 import { Routes } from 'router/routes';
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
-import { Flex } from 'antd';
+import { Col, Flex } from 'antd';
 import { MenuIcon } from 'assets/images/icons/menu';
 
 const HeaderComponent = () => {
@@ -91,9 +91,9 @@ const HeaderComponent = () => {
     <div className={headerClasses}>
       <div className=' py-49'>
         <Flex justify='space-between'>
-          <div className='col-6 p-0'>
+          <Col className='col-6 p-0'>
             <Logo />
-          </div>
+          </Col>
           <Flex
             align='center'
             justify='space-between'

@@ -11,6 +11,7 @@ import classNames from 'classnames';
 import { useVideo } from './actions/home.query';
 import { PlayButtonIcon } from 'assets/images/icons/play-button';
 import { useLeads } from 'core/common/leads/actions/leads.query';
+import { Link } from 'react-router-dom';
 function HomeComponent() {
     const translate = useLocalization();
     const classes = useHomePageStyles();
@@ -61,14 +62,18 @@ function HomeComponent() {
                     <Flex gap={30}>
 
                     <ButtonComponent type='primary'>
-                        <Flex gap={10} align='center'>
-                        {translate('products')} <ArrowRight className={''}/>
-                        </Flex>
+                        <Link to={Routes.products}>
+                             <Flex gap={10} align='center' style={{color:'white'}}>
+                                 {translate('products')} <ArrowRight className={''}/>
+                             </Flex>
+                        </Link>
                     </ButtonComponent>
                     <ButtonComponent type='secondary'>
-                        <Flex gap={10} align='center'>
-                            {translate('aboutNicart')} <ArrowDown className={''}/>
-                        </Flex>
+                        <Link to={Routes.about}>
+                            <Flex gap={10} align='center'  style={{color:'#3E6F00'}}>
+                                {translate('aboutNicart')} <ArrowDown className={''}/>
+                            </Flex>
+                        </Link>
                     </ButtonComponent>
                     </Flex>
                 </Flex>
@@ -98,6 +103,7 @@ function HomeComponent() {
                 <Flex className={classes.bannerAbout}>
                     <Flex vertical gap={20} align='flex-start'>
                         <h2>
+                            
                             {translate('aboutUs')}
                         </h2>
                         <h1>
@@ -106,9 +112,12 @@ function HomeComponent() {
                         <p>
                             {translate('bannerAboutText')}
                         </p>
-                        <span>
+                        <Link to={Routes.about}>
+                            <span>
                             Learn more
-                        </span>
+                            </span>
+                            
+                        </Link>
                     </Flex>
                     <img src={'https://s3-alpha-sig.figma.com/img/3d1c/405a/05fcb30a8b5527e34856c8ba7eeca9c7?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U~huL6g53l-G808i9S7VdO8pdkDhL6ltj~oO2aqVwVofX1zYjxYC55-88f195cGEA25gCtlHhYJIPlJX0ztEFOrXpbLBt~ObzRmQlSFLgH7eFi-4qwJ11B6v-euHONiqsM1G0NKWRw3bLOgFuS6Nees6hJk~9qUBpuEO0fvMjpX2J9CZ~3JxiHBDgH7PIO1sB7WnJzJPoItxt75-UMaDn1~~X-jXOLreQgWbaV8LfGrc~t1IfD4A2xBbSmu2nFG3yvwKYQMV5bkfpCU3fK8rJSj3hH9LlRHIjtsPTxktczE7RYUhCcP8bBal6DBLo2IzvUZRbwIJTPg8u8-8E~6O9g__'} className={classes.bannerAboutImage} alt='' />
                 </Flex>

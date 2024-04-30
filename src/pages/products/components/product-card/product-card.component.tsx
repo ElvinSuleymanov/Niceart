@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
-import { useProductCardStyles } from "./product-card.style";
-import { ProductCardProps } from "./product-card.types";
-import { Routes } from "router/routes";
-import ButtonComponent from "../../../../core/shared/button/button.component";
+import { Link } from 'react-router-dom';
+import { useProductCardStyles } from './product-card.style';
+import { ProductCardProps } from './product-card.types';
+import { Routes } from 'router/routes';
+import ButtonComponent from '../../../../core/shared/button/button.component';
+import useLocalization from 'assets/lang';
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const classes = useProductCardStyles();
+  const translate = useLocalization();
+
   return (
     <div className={`${classes.card}`}>
       <div className={`${classes.cardBody}`}>
@@ -13,22 +16,22 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <p className={classes.cardDesc}>{product.about.description}</p>
         <div className={classes.cardDatas}>
           <div className={classes.cardData}>
-            <p>Müddət(Ay)</p>
+            <p>{translate('duration_month')}</p>
             <p>{product.features.period}</p>
           </div>
           <div className={classes.cardData}>
-            <p>Məbləğ(AZN)</p>
+            <p>{translate('price')}</p>
             <p>{product.features.amount}</p>
           </div>
           <div className={classes.cardData}>
-            <p>Faiz Dəcəsi(%)</p>
+            <p>{translate('interest_rate')}</p>
             <p>{product.features.comission}</p>
           </div>
         </div>
         <Link to={`${Routes.productDetail}/${product.about.id}`}>
           <ButtonComponent
-            arrow={"right"}
-            type={"primary"}
+            arrow={'right'}
+            type={'primary'}
             className={classes.cardButton}
           >
             Apply loan

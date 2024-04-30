@@ -8,7 +8,7 @@ export const useCustomButtonstyle = createUseStyles({
     alignItems: 'center',
     justifyContent: 'center',
     alignContent: 'center',
-    borderRadius: '0.5rem',
+    borderRadius: rem(8),
     cursor: 'pointer',
     fontSize: rem(15),
     transition: 'background-color 0.3s ease',
@@ -21,8 +21,8 @@ export const useCustomButtonstyle = createUseStyles({
   primary: {
     backgroundColor: colors.greenMain,
     color: colors.white,
-    padding: '0.5rem 1rem',
-    marginRight: '1rem',
+    padding: rem(10)+""+rem(20),
+    marginRight: rem(16),
     border: `2px solid ${colors.greenMain}`,
     height: rem(49),
     '&:hover': {
@@ -35,27 +35,27 @@ export const useCustomButtonstyle = createUseStyles({
     backgroundColor: colors.white,
     color: colors.greenMain,
     border: `2px solid ${colors.greenMain}`,
-    width: '20',
+    width: rem(200),
     height: rem(48),
 
-    padding: '0.5rem 1rem',
+    padding: rem(10) +' '+rem(20),
     '&:hover': {
       backgroundColor: colors.greenMain,
       color: colors.white,
     },
   },
   iconRight: {
-    marginLeft: '0.5rem',
+    marginLeft: rem(10),
   },
   iconDown: {
-    marginTop: '0.5rem',
-    marginLeft: '0.5rem',
+    marginTop: rem(10),
+    marginLeft: rem(10),
   },
   iconUp: {
     width: rem(25),
     height: rem(25),
-    marginTop: '0.5rem',
-    marginLeft: '0.5rem',
+    marginTop: rem(4),
+    marginLeft: rem(4),
   },
   iconPrimary: {
     '&:hover > *': {

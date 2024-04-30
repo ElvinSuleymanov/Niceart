@@ -25,8 +25,8 @@ const styles = {
         fontSize: rem(16),
     },
     panel: {width: rem(480),},
-    or: {color: colors.authSubtitleText,},
-    invalidField: {border: '1px solid ' + colors.validationErrorColor,},
+    or: {color: colors.fadedBg,},
+    invalidField: {border: '1px solid ' + colors.greenMain,},
 };
 
 export const useLoginStyles = createUseStyles(styles);

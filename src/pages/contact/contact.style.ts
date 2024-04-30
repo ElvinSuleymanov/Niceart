@@ -1,5 +1,6 @@
 import colors from 'assets/styles/abstracts/color';
 import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 import sizes from 'assets/styles/abstracts/sizes';
 import { createUseStyles, Styles } from 'react-jss';
 
@@ -27,7 +28,7 @@ const styles:Styles = {
            borderWidth:rem(4),
            borderStyle:'solid',
            objectFit:'cover',
-           '@media(max-width:600px)': {
+           [breakpoint(600)] : {
                 width:rem(135),
                 height:rem(183)
            },
@@ -35,15 +36,15 @@ const styles:Styles = {
                 position:'absolute',
                 right:rem(0),
                 zIndex:4,
-                '@media(max-width:600px)': {
+                [breakpoint(600)] : {
                     right:rem(80),
                     top:rem(100)
                 },
-                '@media(max-width:490px)': {
+                [breakpoint(490)] : {
                     right:rem(20),
                     top:rem(100)
                 },
-                '@media(max-width:425px)': {
+                [breakpoint(425)] : {
                     right:rem(20),
                     top:rem(115)
                 }
@@ -54,15 +55,15 @@ const styles:Styles = {
                 bottom:rem(-50),
                 zIndex:5,
 
-                '@media(max-width:600px)': {
+                [breakpoint(600)] : {
                     right:rem(110),
                     bottom:rem(55),
                 },
-                '@media(max-width:490px)': {
+                [breakpoint(490)] : {
                     right:rem(70),
                     bottom:rem(55),
                 },
-                '@media(max-width:425px)': {
+                [breakpoint(425)] : {
                     right:rem(40),
                     bottom:rem(50),
                 }
@@ -71,11 +72,11 @@ const styles:Styles = {
                 position:'absolute',
                 top:rem(-40),
                 left:rem(40),
-                '@media(max-width:600px)': {
+                [breakpoint(600)] : {
                     top:rem(70),
                     left:rem(90)
                 },
-                '@media(max-width:425px)': {
+                [breakpoint(425)] : {
                     top:rem(70),
                     left:rem(50)
                 }
@@ -84,11 +85,11 @@ const styles:Styles = {
                 position:'absolute',
                 bottom:rem(-10),
                 zIndex:10,
-                '@media(max-width:600px)': {
+                [breakpoint(600)] : {
                     bottom:rem(100),
                     left:rem(50)
                 },
-                '@media(max-width:425px)': {
+                [breakpoint(425)] : {
                     left:rem(30),
                     
                 }
