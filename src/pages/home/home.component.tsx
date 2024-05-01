@@ -71,7 +71,7 @@ function HomeComponent() {
                     <ButtonComponent type='secondary'>
                         <Link to={Routes.about}>
                             <Flex gap={10} align='center'  style={{color:'#3E6F00'}}>
-                                {translate('aboutNicart')} <ArrowDown className={''}/>
+                                {translate('about_nicart')} <ArrowDown className={''}/>
                             </Flex>
                         </Link>
                     </ButtonComponent>
