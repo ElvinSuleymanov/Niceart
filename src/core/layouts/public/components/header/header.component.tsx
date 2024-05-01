@@ -1,17 +1,18 @@
 import './header.style';
 import { useHeaderStyles } from './header.style';
 import { Logo, LogoMini } from 'assets/images/icons/logo';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import useLocalization from 'assets/lang';
 import { Routes } from 'router/routes';
 import classNames from 'classnames';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Col, Flex } from 'antd';
 import { MenuIcon } from 'assets/images/icons/menu';
 
 const HeaderComponent = () => {
   const classes = useHeaderStyles();
   const translate = useLocalization();
+  const {pathname} = useLocation();
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const openMenuHandler = useCallback(() => {
     setIsMenuOpened(!isMenuOpened);
@@ -87,6 +88,9 @@ const HeaderComponent = () => {
     [classes.overlay, classes.overlayOpen, isMenuOpened]
   );
 
+  useEffect(() => {
+    setIsMenuOpened(false);
+  }, [pathname]);
   return (
     <div className={headerClasses}>
       <div className=' py-49'>

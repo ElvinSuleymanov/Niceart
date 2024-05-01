@@ -15,7 +15,7 @@ const StrategyComponent = () => {
             {translate('title')}
         </h1>
          <p>
-            {translate('strategyText')}
+            {translate('strategy_text')}
         </p>   
     </Flex>
   );

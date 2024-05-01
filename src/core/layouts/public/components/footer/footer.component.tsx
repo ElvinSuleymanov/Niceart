@@ -58,7 +58,7 @@ const FooterComponent = () => {
               <Link to={Routes.home}>
                 <Logo />
               </Link>
-              <p>{translate('footerText')}</p>
+              <p>{translate('footer_text')}</p>
               <Flex gap={15} align='center'>
                 <Link to={'https://www.facebook.com/'}>
                   <FacebookIcon />
@@ -88,7 +88,7 @@ const FooterComponent = () => {
                 {translate('homepage')}
               </Link>
               <Link to={Routes.about} className={classes.footerLink}>
-                {translate('aboutUs')}
+                {translate('about_us')}
               </Link>
               <Link to={Routes.products} className={classes.footerLink}>
                 {translate('products')}
@@ -105,7 +105,7 @@ const FooterComponent = () => {
           <Col lg={6} md={12}>
             <Flex vertical gap={15}>
               <Typography.Title level={5}>
-                {translate('contactsUs')}
+                {translate('contacts_us')}
               </Typography.Title>
               <Flex gap={10} style={{ cursor: 'pointer' }}>
                 <EnvelopeIcon />
@@ -126,17 +126,17 @@ const FooterComponent = () => {
           <Row className={footerBottomClasses}>
             <Col lg={12}>
               <Typography.Title level={5}>
-                Copyright Ⓒ {date} {projectName}
+                {translate('copyright')} Ⓒ {date} {projectName}
               </Typography.Title>
             </Col>
             <Col lg={12}>
               <Flex gap={15}>
-                <Typography>All Rights Reserved</Typography>
+                <Typography>{translate('all_rights_reserved')}</Typography>
                 <Typography className={classes.footerCopy}>
-                  Terms and Conditions
+                  {translate('terms_conditions')}
                 </Typography>
                 <Typography className={classes.footerCopy}>
-                  Privacy Policy
+                  {translate('privacy_policy')}
                 </Typography>
               </Flex>
             </Col>

@@ -35,7 +35,7 @@ const AboutComponent = () => {
         </h1>
         <Flex className={classes.bannerTop} gap={20} vertical>
             <h2>
-              {translate('whoWeAre')}
+              {translate('who_we_are')}
             </h2>
             <h1>
               {aboutLeads?.heading}
@@ -55,10 +55,10 @@ const AboutComponent = () => {
                 {translate('ourpurpose')}
               </h2>
               <h1>
-                {translate('homeTitle')}
+                {translate('home_title')}
               </h1>
               <p>
-                {translate('aboutTopText')}
+                {translate('about_top_text')}
               </p>
           </Flex>
           <Flex vertical className={classes.container} gap={30}>
@@ -73,10 +73,10 @@ const AboutComponent = () => {
       <Flex justify='flex-start'>
         <Flex className={classes.strategies} gap={20} vertical>
                 <h2>
-                  {translate('ourStrategy')}
+                  {translate('our_strategy')}
                 </h2>
                 <h1>
-                  {translate('ourStrategyText')}
+                  {translate('our_strategy_text')}
                 </h1>
         </Flex>
       </Flex>

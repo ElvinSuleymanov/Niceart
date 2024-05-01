@@ -5,7 +5,6 @@ import TableComponent from 'pages/table/table.component';
 import {Routes} from './routes';
 import NotFound from 'pages/not-found/notfound.component';
 import AuthProtectedComponent from './protected/auth-protected.component';
-import UsersComponent from 'pages/users/users.component';
 import AboutComponent from 'pages/about/about.component';
 import PartnersComponent from 'pages/partners/partners.component';
 import ContactComponent from 'pages/contact/contact.component';
@@ -27,10 +26,6 @@ const router = createBrowserRouter([
             {
                 path: Routes.table,
                 element: <TableComponent/>,
-            },
-            {
-                path:Routes.users,
-                element: <UsersComponent/>
             },
             {
                 path:Routes.products,

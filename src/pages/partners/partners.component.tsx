@@ -13,12 +13,12 @@ const PartnersComponent = () => {
   return (
     <div>
       <AboutHeading
-        heading={filteredLead?.heading || translate('partnersHeading')}
-        title={filteredLead?.title || translate('partnersTitle')}
+        heading={filteredLead?.heading || translate('partners_heading')}
+        title={filteredLead?.title || translate('partners_title')}
         description={
-          filteredLead?.description || translate('partnersDescription')
+          filteredLead?.description || translate('partners_description')
         }
-        buttonFirst={translate('becamePartner')}
+        buttonFirst={translate('became_partner')}
       />
       <div className='row py-50'>
         {partnersData &&

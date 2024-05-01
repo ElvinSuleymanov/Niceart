@@ -44,19 +44,19 @@ const ContactComponent = () => {
             <Flex className={classes.flexColMobile}>
                 <Flex gap={30} vertical className={classes.bannerInfo}>
                     <h1>
-                        {translate('discoverUs')}
+                        {translate('discover_us')}
                     </h1>
                     <p>
-                        {translate('discoverUsText')}
+                        {translate('discover_us_text')}
                     </p>
                     <h1>
-                        {translate('visitUs')}
+                        {translate('visit_us')}
                     </h1>
                     <p>
                         {contact && contact.record.location}
                     </p>
                     <h1>
-                        {translate('emailUs')}
+                        {translate('email_us')}
                     </h1>
                     <p>
                         {contact && contact.record.email}
@@ -73,10 +73,10 @@ const ContactComponent = () => {
             <Flex className={classes.formContainer} gap={70} justify='space-between'>
                 <Flex vertical className={classes.formText}>
                     <h1 className={classes.title}>
-                        {translate('contactFormTitle')}
+                        {translate('contact_form_title')}
                     </h1>
                     <p>
-                        {translate('contactFormText')}
+                        {translate('contact_form_text')}
                     </p>
                 </Flex>
                 <Form  layout='vertical' className={classes.form}>
@@ -84,7 +84,7 @@ const ContactComponent = () => {
                         <Input placeholder={translate('email')}/>
                     </Form.Item>
                     <Flex gap={33}>
-                        <Form.Item className='w-100' label={translate('contactNumber')} name={'phoneNumber'}>
+                        <Form.Item className='w-100' label={translate('contact_number')} name={'phoneNumber'}>
                             <Input placeholder={translate('message')}/>
                         </Form.Item>
                         <Form.Item  className='w-100' label={translate('subject')} name={'subject'}>
