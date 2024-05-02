@@ -1,7 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
 import PublicComponent from 'core/layouts/public/public.component';
 import HomeComponent from 'pages/home/home.component';
-import TableComponent from 'pages/table/table.component';
 import {Routes} from './routes';
 import NotFound from 'pages/not-found/notfound.component';
 import AuthProtectedComponent from './protected/auth-protected.component';
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
             {
                 path:Routes.about,
                 element:<AboutComponent/>
-            },
-            {
-                path: Routes.table,
-                element: <TableComponent/>,
             },
             {
                 path:Routes.users,

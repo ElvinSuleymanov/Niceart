@@ -21,7 +21,7 @@ export const useCustomButtonstyle = createUseStyles({
   primary: {
     backgroundColor: colors.greenMain,
     color: colors.white,
-    padding: rem(10)+""+rem(20),
+    padding: rem(10)+' '+rem(20),
     marginRight: rem(16),
     border: `2px solid ${colors.greenMain}`,
     height: rem(49),

@@ -29,7 +29,7 @@ const AboutComponent = () => {
   return (
     <div>
        <Breadcrumb className='py-30 pt-10' items={breadCrumbItems}/>
-       <Flex gap={100} className={classes.mainTitleContainer}>
+       <Flex gap={10} className={classes.mainTitleContainer}>
         <h1 className={classes.mainTitle} >
           Title for about us or Lorem Ipsum motto
         </h1>

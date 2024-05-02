@@ -29,6 +29,7 @@ export const usePartnersCardStyles = createUseStyles({
       maxWidth: '100%',
       height: 'auto',
     },
+    
   },
   partnersHead: {
     display: 'flex',

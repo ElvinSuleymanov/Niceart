@@ -1,5 +1,8 @@
 export const az = {
-    rights: 'Bütün hüquqlar qorunur',
+    rights: 'All Rights Reserved',
+    terms:'Terms and Conditions',
+    pravicy:'Privacy Policy',
+    
     copyright: 'Copyright',
     organisation: 'Azintelecom MMC',
     site:'Site',
@@ -90,6 +93,7 @@ footerText:'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam',
     duration_month:'Müddət (Ay)',
     price:'Məbləğ (AZN)',
     interest_rate:'Faiz dərəcəsi (%)',
+    apply_loan:'Appy Loan',
 
 
     //partnters

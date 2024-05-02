@@ -49,7 +49,7 @@ export const rootSlice = createSlice({
             state.locale = lang[action.payload];
             localStorage.setItem(`${environment.applicationName}-locale`, action.payload);
         },
-        setUser: (state: IState, action: PayloadAction<any>) => {
+        setUser: (state: IState) => {
             // state.user = jwtDecode(action.payload);
             state.user = 'user';
         },

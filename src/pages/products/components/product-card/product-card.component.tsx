@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             type={'primary'}
             className={classes.cardButton}
           >
-            Apply loan
+           {translate('apply_loan')}
           </ButtonComponent>
         </Link>
       </div>

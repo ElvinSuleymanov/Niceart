@@ -1,9 +1,9 @@
 import { AboutHeading } from 'core/shared/about-heading/about-heading.component';
-import CompanyCard from 'pages/partners/components/partners-card/partners-card.companent';
+import PartnerCard from 'pages/partners/components/partners-card/partners-card.companent';
 import { usePartners } from './actions/partners.query';
 import { useLeads } from 'core/common/leads/actions/leads.query';
 import useLocalization from 'assets/lang';
-import { Col } from 'antd';
+import { Row, Col } from 'antd';
 
 const PartnersComponent = () => {
   const { data: partnersData } = usePartners();
@@ -20,14 +20,14 @@ const PartnersComponent = () => {
         }
         buttonFirst={translate('becamePartner')}
       />
-      <div className='row py-50'>
+       <Row gutter={[16, 16]} justify='start'>
         {partnersData &&
           partnersData.map((partners, index) => (
-            <Col className='col-md-3 col-lg-3 col-sm-6' key={index}>
-              <CompanyCard partners={partners} />
+            <Col key={index} xs={24} sm={12} md={8} lg={6}>
+              <PartnerCard partners={partners} />
             </Col>
           ))}
-      </div>
+      </Row>
     </div>
   );
 };

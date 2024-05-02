@@ -1,4 +1,4 @@
-import { Breadcrumb, Button, Card, Checkbox, Flex, Input, InputNumber, Slider, Typography } from 'antd';
+import { Breadcrumb, Card, Checkbox, Flex, Input, Slider, Typography } from 'antd';
 import { HomeIcon } from 'assets/images/icons/home';
 import useLocalization from 'assets/lang';
 import { useCallback, useMemo, useState } from 'react';

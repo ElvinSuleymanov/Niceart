@@ -27,7 +27,7 @@ const ButtonComponent = ({type:variant = 'primary', arrow, size = 'middle', chil
         [classes.iconDown]:arrow === 'down'
       }
     )
-  ), []);
+  ), [arrow, classes.iconDown, classes.iconPrimary, classes.iconRight, classes.iconUp]);
   return (
     <Button
       {...props}

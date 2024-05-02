@@ -126,17 +126,17 @@ const FooterComponent = () => {
           <Row className={footerBottomClasses}>
             <Col lg={12}>
               <Typography.Title level={5}>
-                Copyright Ⓒ {date} {projectName}
+                {translate('')} Ⓒ {date} {projectName}
               </Typography.Title>
             </Col>
             <Col lg={12}>
               <Flex gap={15}>
-                <Typography>All Rights Reserved</Typography>
+                <Typography>{translate('rights')}</Typography>
                 <Typography className={classes.footerCopy}>
-                  Terms and Conditions
+                  {translate('terms')}
                 </Typography>
                 <Typography className={classes.footerCopy}>
-                  Privacy Policy
+                  {translate('pravicy')}
                 </Typography>
               </Flex>
             </Col>
