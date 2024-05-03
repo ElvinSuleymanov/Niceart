@@ -1,4 +1,4 @@
-import { Breadcrumb, Flex, Form, Input } from 'antd';
+import { Breadcrumb, Col, Flex, Form, Input } from 'antd';
 import { HomeIcon } from 'assets/images/icons/home';
 import useLocalization from 'assets/lang';
 import  { useEffect, useMemo } from 'react';
@@ -40,7 +40,9 @@ const ContactComponent = () => {
             
   return (
     <div>
-        <Breadcrumb items={breadCrumbItems} className='py-30' />
+        <Col xs={0} sm={0} md={8} lg={6} xl={4}>
+        <Breadcrumb className='my-0' items={breadCrumbItems} />
+      </Col>
             <Flex className={classes.flexColMobile}>
                 <Flex gap={30} vertical className={classes.bannerInfo}>
                     <h1>

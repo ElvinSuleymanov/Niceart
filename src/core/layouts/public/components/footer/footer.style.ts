@@ -49,6 +49,7 @@ const styles: Styles = {
     [breakpoint(475)]: {
       justifyContent: 'flex-end',
       flexWrap: 'wrap',
+      gap:rem(10)
 
       
     },

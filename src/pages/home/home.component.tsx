@@ -1,4 +1,4 @@
-import { Breadcrumb, Card, Checkbox, Flex, Input, Slider, Typography } from 'antd';
+import { Breadcrumb, Card, Checkbox, Col, Flex, Input, Slider, Typography } from 'antd';
 import { HomeIcon } from 'assets/images/icons/home';
 import useLocalization from 'assets/lang';
 import { useCallback, useMemo, useState } from 'react';
@@ -52,7 +52,9 @@ function HomeComponent() {
 
     return (   
         <div className={containerClass}>
-            <Breadcrumb items={breadCrumbItems}/>
+            <Col xs={0} sm={0} md={8} lg={6} xl={4}>
+                <Breadcrumb items={breadCrumbItems} />
+            </Col>
             <Flex gap={70} align='center' className={classes.bannerTop}>
                 <p className={classes.title}>
                     {translate('home_title')}

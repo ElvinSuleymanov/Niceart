@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Breadcrumb, Flex } from 'antd';
+import { Breadcrumb, Col, Flex } from 'antd';
 import useLocalization from 'assets/lang';
 import { HomeIcon } from 'assets/images/icons/home';
 import { Routes } from 'router/routes';
@@ -28,7 +28,9 @@ const AboutComponent = () => {
   
   return (
     <div>
-       <Breadcrumb className='py-30 pt-10' items={breadCrumbItems}/>
+       <Col xs={0} sm={0} md={8} lg={6} xl={4}>
+        <Breadcrumb className='py-30 pt-10' items={breadCrumbItems} />
+      </Col>
        <Flex gap={10} className={classes.mainTitleContainer}>
         <h1 className={classes.mainTitle} >
           Title for about us or Lorem Ipsum motto
