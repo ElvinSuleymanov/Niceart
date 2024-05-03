@@ -1,4 +1,4 @@
-interface Leads {
+interface Abouts {
     id:number;
     title:string | null;
     tag:string | null;

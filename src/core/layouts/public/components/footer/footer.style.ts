@@ -45,10 +45,9 @@ const styles: Styles = {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
-
+    gap:rem(30),
     [breakpoint(475)]: {
       justifyContent: 'flex-end',
-      flexWrap: 'wrap',
       gap:rem(10)
 
       

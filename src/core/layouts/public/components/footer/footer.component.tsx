@@ -19,7 +19,7 @@ import { useFooterStyles } from './footer.style';
 import { environment } from 'core/configs/app.config';
 import { Link } from 'react-router-dom';
 import { Routes } from 'router/routes';
-import { useContact } from 'core/common/contact/contact.query';
+import { useContact } from 'pages/contact/actions/contact.query';
 
 const FooterComponent = () => {
   const classes = useFooterStyles();
@@ -102,8 +102,8 @@ const FooterComponent = () => {
               <Typography.Title level={5}>
                 {translate('contacts_us')}
               </Typography.Title>
-              <Flex gap={10} style={{ cursor: 'pointer' }}>
-                <EnvelopeIcon />
+              <Flex gap={10} style={{ cursor: 'pointer'}}>
+                <EnvelopeIcon/>
                 {contacts?.record.email}
               </Flex>
               <Flex gap={10} style={{ cursor: 'pointer' }}>

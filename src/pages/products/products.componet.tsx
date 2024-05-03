@@ -1,7 +1,7 @@
 import { useProduct } from './actions/product.query';
 import ProductModel from './models/products.model';
 import useLocalization from 'assets/lang';
-import { useLeads } from 'core/common/leads/actions/leads.query';
+import { useLeads } from 'pages/about/actions/about.query';
 import { Breadcrumb, Col } from 'antd';
 import { HomeIcon } from 'assets/images/icons/home';
 import { useMemo } from 'react';
@@ -28,7 +28,7 @@ export const ProductsComponent: React.FC = () => {
 
   return (
     <div className='px-15'>
-       <Col xs={0} sm={0} md={8} lg={6} xl={4}>
+      <Col xs={0} sm={0} md={8} lg={6} xl={4}>
         <Breadcrumb className='my-0' items={breadCrumbItems} />
       </Col>
       <AboutHeading

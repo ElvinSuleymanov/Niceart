@@ -1,7 +1,7 @@
 import { AboutHeading } from 'core/shared/about-heading/about-heading.component';
 import PartnerCard from 'pages/partners/components/partners-card/partners-card.companent';
 import { usePartners } from './actions/partners.query';
-import { useLeads } from 'core/common/leads/actions/leads.query';
+import { useLeads } from 'pages/about/actions/about.query';
 import useLocalization from 'assets/lang';
 import { Row, Col, Breadcrumb } from 'antd';
 import { HomeIcon } from 'assets/images/icons/home';
@@ -39,7 +39,7 @@ const PartnersComponent = () => {
         }
         buttonFirst={translate('became_partner')}
       />
-       <Row gutter={[16, 16]} justify='start'>
+      <Row gutter={[16, 16]} justify='start'>
         {partnersData &&
           partnersData.map((partners, index) => (
             <Col key={index} xs={24} sm={12} md={8} lg={6}>
