@@ -49,14 +49,14 @@ const AboutComponent = () => {
       </Flex>
       <Flex justify='flex-end'>
         <Flex className={classes.ourPurpose}>
-          <Flex className={classes.ourPurposeText} gap={20} vertical>
+          <Flex className={classes.ourPurposeText} gap={10} vertical justify='flex-end'>
             <h2>{translate('ourpurpose')}</h2>
             <h1>{translate('home_title')}</h1>
             <p>{translate('about_top_text')}</p>
           </Flex>
           <Flex vertical className={classes.container} gap={30}>
             <PurposeComponent />
-            <Flex justify='flex-end' className='ml-3'>
+            <Flex justify='flex-end' className='ml-30'>
               <PurposeComponent />
             </Flex>
             <PurposeComponent />

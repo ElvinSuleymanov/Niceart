@@ -44,7 +44,7 @@ const styles:Styles = {
         width:sizes.full,
         maxWidth:rem(500),
         position:'absolute',
-        left:rem(-230),
+        left:rem(-160),
         top:rem(130),
         [breakpoint(992)] : {
             position:'relative',
