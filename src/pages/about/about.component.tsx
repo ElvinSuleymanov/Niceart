@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Breadcrumb, Col, Flex } from 'antd';
 import useLocalization from 'assets/lang';
 import { HomeIcon } from 'assets/images/icons/home';
@@ -7,6 +7,7 @@ import { useAboutStyles } from './about.style';
 import PurposeComponent from './components/purpose/purpose.component';
 import StrategyComponent from './components/strategy/strategy.component';
 import { useLeads } from 'pages/about/actions/about.query';
+import { Link } from 'react-router-dom';
 const AboutComponent = () => {
   const translate = useLocalization();
   const classes = useAboutStyles();
@@ -16,7 +17,7 @@ const AboutComponent = () => {
         title: <HomeIcon />,
       },
       {
-        title: translate('about'),
+        title: <Link to={Routes.about}>{translate('about')}</Link>,
         path: Routes.about,
       },
     ],

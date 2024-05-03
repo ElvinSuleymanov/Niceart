@@ -36,7 +36,7 @@ function HomeComponent() {
         title: <HomeIcon />,
       },
       {
-        title: translate('homepage'),
+        title: <Link to={Routes.home}>{translate('home')}</Link>,
         path: Routes.home,
       },
     ],

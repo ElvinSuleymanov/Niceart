@@ -12,7 +12,7 @@ import {
 import { HomeIcon } from 'assets/images/icons/home';
 import useLocalization from 'assets/lang';
 import { useMemo, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Routes } from 'router/routes';
 import { useProductDetailStyles } from './product-detail.style';
 import classNames from 'classnames';
@@ -44,7 +44,7 @@ const ProductDetailComponent = () => {
         title: <HomeIcon />,
       },
       {
-        title: product?.about.title,
+        title:<Link to={Routes.productDetail}>{product?.about.title}</Link>,
         path: Routes.productDetail,
       },
     ],

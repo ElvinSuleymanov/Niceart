@@ -8,6 +8,7 @@ import { useMemo } from 'react';
 import { Routes } from 'router/routes';
 import { AboutHeading } from 'core/shared/about-heading/about-heading.component';
 import ProductCard from './components/product-card/product-card.component';
+import { Link } from 'react-router-dom';
 export const ProductsComponent: React.FC = () => {
   const { data: productData } = useProduct();
   const { data: leadsData } = useLeads();
@@ -19,7 +20,7 @@ export const ProductsComponent: React.FC = () => {
         title: <HomeIcon />,
       },
       {
-        title: translate('products'),
+        title: <Link to={Routes.products}>{translate('products')}</Link>,
         path: Routes.products,
       },
     ],

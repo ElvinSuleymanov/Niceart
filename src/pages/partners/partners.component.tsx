@@ -7,6 +7,7 @@ import { Row, Col, Breadcrumb } from 'antd';
 import { HomeIcon } from 'assets/images/icons/home';
 import { useMemo } from 'react';
 import { Routes } from 'router/routes';
+import { Link } from 'react-router-dom';
 
 const PartnersComponent = () => {
   const { data: partnersData } = usePartners();
@@ -19,7 +20,7 @@ const PartnersComponent = () => {
         title: <HomeIcon />,
       },
       {
-        title: translate('partners'),
+        title: <Link to={Routes.partners}>{translate('partners')}</Link>,
         path: Routes.products,
       },
     ],
