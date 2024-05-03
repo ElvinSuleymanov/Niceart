@@ -7,15 +7,15 @@ const StrategyComponent = () => {
     const translate = useLocalization();
     const classes = useStrategyStyles();
   return (
-    <Flex vertical gap={40} align='flex-start'>
-        <Card bordered={false}>
+    <Flex vertical gap={40} align='flex-start' className={classes.container}>
+        <Card bordered={false} className={classes.imageContainer}>
                 <FingerPrintIcon/>
         </Card>
         <h1 className={classes.title}>
             {translate('title')}
         </h1>
          <p>
-            {translate('strategyText')}
+            {translate('strategy_text')}
         </p>   
     </Flex>
   );

@@ -36,29 +36,18 @@ const FooterComponent = () => {
     [classes.footer]
   );
 
-  const footerBottomClasses = useMemo(
-    () => (
-      classNames(
-        {
-          'container py-60':true,
-          [classes.footerBottom]:true
-        }
-      )
-    ), [classes.footerBottom]
-  );
-
-  const {data:contacts} = useContact();
+  const { data: contacts } = useContact();
 
   return (
     <div className={classes.footerContainer}>
       <footer className={footerClasses}>
-        <Row className={classes.footerSm} >
-          <Col lg={6} md={24} xs={24} className='my-30' >
-            <Flex vertical gap={20} >
+        <Row className={classes.footerSm}>
+          <Col lg={6} md={24} xs={24} className='my-30'>
+            <Flex vertical gap={20}>
               <Link to={Routes.home}>
                 <Logo />
               </Link>
-              <p>{translate('footerText')}</p>
+              <p className={classes.footerCopy}>{translate('footer_text')}</p>
               <Flex gap={15} align='center'>
                 <Link to={'https://www.facebook.com/'}>
                   <FacebookIcon />
@@ -79,16 +68,22 @@ const FooterComponent = () => {
             </Flex>
           </Col>
 
-          <Col lg={6} md={0} ></Col>
+          <Col lg={6} md={0}></Col>
 
-          <Col lg={6} md={12} >
-            <Flex vertical gap={15} align='center'>
+          <Col lg={6} md={12}>
+            <Flex
+              vertical
+              gap={15}
+              align='flex-start'
+              style={{ marginRight: '20px' }}
+              className={classes.footerCopy}
+            >
               <Typography.Title level={5}>{translate('site')}</Typography.Title>
               <Link to={Routes.home} className={classes.footerLink}>
                 {translate('homepage')}
               </Link>
               <Link to={Routes.about} className={classes.footerLink}>
-                {translate('aboutUs')}
+                {translate('about_us')}
               </Link>
               <Link to={Routes.products} className={classes.footerLink}>
                 {translate('products')}
@@ -103,9 +98,9 @@ const FooterComponent = () => {
           </Col>
 
           <Col lg={6} md={12}>
-            <Flex vertical gap={15}>
+            <Flex vertical gap={15} className={classes.footerCopy}>
               <Typography.Title level={5}>
-                {translate('contactsUs')}
+                {translate('contacts_us')}
               </Typography.Title>
               <Flex gap={10} style={{ cursor: 'pointer' }}>
                 <EnvelopeIcon />
@@ -123,20 +118,22 @@ const FooterComponent = () => {
           </Col>
         </Row>
         <div>
-          <Row className={footerBottomClasses}>
+          <Row className={`${classes.footerBottomClasses} container`}>
             <Col lg={12}>
-              <Typography.Title level={5}>
-                {translate('')} Ⓒ {date} {projectName}
-              </Typography.Title>
+              <Typography className={classes.footerCopy}>
+                {translate('copyright')} Ⓒ {date} {projectName}
+              </Typography>
             </Col>
             <Col lg={12}>
-              <Flex gap={15}>
-                <Typography>{translate('rights')}</Typography>
-                <Typography className={classes.footerCopy}>
-                  {translate('terms')}
+              <Flex className={classes.footerText}>
+                <Typography className={classes.footerRight}>
+                  {translate('all_rights_reserved')}
                 </Typography>
-                <Typography className={classes.footerCopy}>
-                  {translate('pravicy')}
+                <Typography className={classes.footerTerms}>
+                  {translate('terms_conditions')}
+                </Typography>
+                <Typography className={classes.footerTerms}>
+                  {translate('privacy_policy')}
                 </Typography>
               </Flex>
             </Col>

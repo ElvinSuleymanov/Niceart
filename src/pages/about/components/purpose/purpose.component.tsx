@@ -11,8 +11,8 @@ const PurposeComponent = () => {
                 <FingerPrintIcon/>
             </Card>
             <Flex vertical gap={10}>
-                <h1>{translate('purposeTitle')}</h1>
-                <p>{translate('purposeText')}</p>
+                <h1>{translate('purpose_title')}</h1>
+                <p>{translate('purpose_text')}</p>
             </Flex>
     </Flex>
   );

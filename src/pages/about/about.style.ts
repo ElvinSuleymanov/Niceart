@@ -11,9 +11,15 @@ const styles:Styles = {
         fontWeight:sizes.boldest,
         [breakpoint(992)] : {
             textAlign:'center'
+        },
+        [breakpoint(390)]: {
+            fontSize:rem(36)
         }
     },
     bannerTop: {
+        [breakpoint(390)]: {
+            gap:rem(5) + '!important'
+        },
         '& h1': {
             fontSize:rem(44),
             fontWeight:sizes.boldest
@@ -49,7 +55,10 @@ const styles:Styles = {
         },
         '& h1': {
             fontSize:rem(44),
-            fontWeight:sizes.boldest
+            fontWeight:sizes.boldest,
+            [breakpoint(390)]: {
+            fontSize:rem(28)
+            }
         },
         '& h2': {
             color:colors.greenMain
@@ -57,7 +66,10 @@ const styles:Styles = {
         '& p': {
             maxWidth:rem(600),
             width:sizes.full,
-            fontWeight:sizes.regular
+            fontWeight:sizes.regular,
+            [breakpoint(390)]: {
+                fontSize:rem(14),
+            }
         },
       
     },
@@ -99,14 +111,19 @@ const styles:Styles = {
     },
     strategiesContainer: {
         maxWidth:rem(740),
-        marginLeft:'auto'
+        marginLeft:'auto',
+        [breakpoint(390)]: {
+            flexDirection:'column'
+        }
     },
     mainTitleContainer: {
         [breakpoint(992)] : {
             flexDirection:'column',
             alignItems:'center'
+        },
+        [breakpoint(390)]: {
+            gap:rem(30) + '!important'
         }
     }
 };
-
 export const useAboutStyles = createUseStyles(styles);

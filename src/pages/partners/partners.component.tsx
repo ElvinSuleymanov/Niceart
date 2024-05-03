@@ -11,14 +11,14 @@ const PartnersComponent = () => {
   const translate = useLocalization();
   const filteredLead = leadsData?.find((lead) => lead.tag === 'Our goal');
   return (
-    <div>
+    <div className='px-15'>
       <AboutHeading
-        heading={filteredLead?.heading || translate('partnersHeading')}
-        title={filteredLead?.title || translate('partnersTitle')}
+        heading={filteredLead?.heading || translate('partners_heading')}
+        title={filteredLead?.title || translate('partners_title')}
         description={
-          filteredLead?.description || translate('partnersDescription')
+          filteredLead?.description || translate('partners_description')
         }
-        buttonFirst={translate('becamePartner')}
+        buttonFirst={translate('became_partner')}
       />
        <Row gutter={[16, 16]} justify='start'>
         {partnersData &&

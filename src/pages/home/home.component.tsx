@@ -55,13 +55,13 @@ function HomeComponent() {
             <Breadcrumb items={breadCrumbItems}/>
             <Flex gap={70} align='center' className={classes.bannerTop}>
                 <p className={classes.title}>
-                    {translate('homeTitle')}
+                    {translate('home_title')}
                 </p>
                 <Flex className={classes.text} vertical gap={24}>
-                    {translate('homeText')}
-                    <Flex gap={30}>
+                    {translate('home_text')}
+                    <Flex gap={20}>
 
-                    <ButtonComponent type='primary'>
+                    <ButtonComponent type='primary' className='mr-0'>
                         <Link to={Routes.products}>
                              <Flex gap={10} align='center' style={{color:'white'}}>
                                  {translate('products')} <ArrowRight className={''}/>
@@ -71,7 +71,7 @@ function HomeComponent() {
                     <ButtonComponent type='secondary'>
                         <Link to={Routes.about}>
                             <Flex gap={10} align='center'  style={{color:'#3E6F00'}}>
-                                {translate('aboutNicart')} <ArrowDown className={''}/>
+                                {translate('about_nicart')} <ArrowDown className={''}/>
                             </Flex>
                         </Link>
                     </ButtonComponent>
@@ -98,19 +98,19 @@ function HomeComponent() {
                     </span>
                 </div>
                 <p className={classes.bannerBelowText}>
-                    {translate('belowBannerText')}
+                    {translate('below_banner_text')}
                 </p>
                 <Flex className={classes.bannerAbout}>
                     <Flex vertical gap={20} align='flex-start'>
                         <h2>
                             
-                            {translate('aboutUs')}
+                            {translate('about_us')}
                         </h2>
                         <h1>
-                            {translate('bannerAboutTitle')}
+                            {translate('banner_about_title')}
                         </h1>
                         <p>
-                            {translate('bannerAboutText')}
+                            {translate('banner_about_text')}
                         </p>
                         <Link to={Routes.about}>
                             <span>
@@ -125,48 +125,48 @@ function HomeComponent() {
             <Flex className={classes.propertyLoan} gap={100} align='center'>
                 <Flex vertical gap={10} >
                     <span className={classes.propertyLoanTitleSecondary}>{translate('products')}</span>
-                    <h1 className={classes.propertyLoanTitle}>{translate('propertyLoanTitle')}</h1>
+                    <h1 className={classes.propertyLoanTitle}>{translate('property_loan_title')}</h1>
                 </Flex>
-                    <p>{translate('propertyLoanText')}</p>
+                    <p>{translate('property_loan_text')}</p>
             </Flex>
             <Flex className={classes.loanCalculator} gap={40}>
                 <Flex vertical gap={20} className={classes.loanCalculatorInfo}>
                     <h1 className={classes.loanTitleSecondary}>{calculatorLeads?.tag}</h1>
                     <h2 className={classes.loanTitle}>{calculatorLeads?.heading}</h2>
-                    <p className={classes.loanText}>{translate('loanText')}</p>
+                    <p className={classes.loanText}>{translate('loan_text')}</p>
                 </Flex>
                 <Flex vertical  gap={20} className='py-20 py-lg-120'>
                     <Flex  className={classes.inputCredentialsContainer}>
                         <Flex vertical >
-                            <h1>{translate('loanAmount')}</h1>
+                            <h1>{translate('loan_amount')}</h1>
                             <Card size='small'>{loanAmount}</Card>
                             <Slider value={loanAmount} onChange={setLoanAmount}  min={1} max={5000} className={classes.rangeInput}/>
                         </Flex>
                         <Flex vertical >
-                            <h1>{translate('loanDuration')}</h1>
+                            <h1>{translate('loan_duration')}</h1>
                             <Card size='small'>{loanDuration}</Card>
                             <Slider value={loanDuration} onChange={setLoanDuration}  min={1} max={5000} className={classes.rangeInput}/>
                         </Flex>
                         <Flex vertical >
-                            <h1>{translate('loanInterest')}</h1>
+                            <h1>{translate('loan_interest')}</h1>
                             <Card size='small'>{loanInterest}</Card>
                             <Slider value={loanInterest} onChange={setInterest}  min={1} max={50} className={classes.rangeInput}/>
                         </Flex>
                     </Flex>
                     <Flex vertical gap={10}>
-                        {translate('monthlyPayment')}
+                        {translate('monthly_payment')}
                         <span className={classes.loanResult}>897.78 ₼</span>
                     </Flex>
-                    <Flex gap={40} className={'justify-content-center flex-lg-column'}>
+                    <Flex gap={40} className={classes.flexColMobile}>
                         <Flex gap={10} vertical className={classes.inputCredentials}>
                             <Typography.Text>
-                                {translate('FINcode')}
+                                {translate('FIN_code')}
                             </Typography.Text>
                             <Input placeholder='ABCDEFG'  />
                         </Flex>
                         <Flex gap={10} vertical className={classes.inputCredentials}>
                            <Typography.Text>
-                                {translate('contactNumber')}
+                                {translate('contact_number')}
                            </Typography.Text>
                            <Input  placeholder='+994 00 000 00 00'/>
                         </Flex>
@@ -174,11 +174,11 @@ function HomeComponent() {
                     <Flex gap={35} align='center' justify='space-between' className={classes.flexColMobile}>
                         <Flex gap={10} align='center'>
                             <Checkbox />
-                            {translate('AKBpermission')}
+                            {translate('akb_permission')}
                         </Flex>
                         <ButtonComponent type='primary' className={classes.applyBtn}>
                             <Flex gap={20} align='center' justify='center'>
-                                {translate('applyNow')} <ArrowRight className={''}/>
+                                {translate('apply_now')} <ArrowRight className={''}/>
                             </Flex>
                         </ButtonComponent>
                     </Flex>

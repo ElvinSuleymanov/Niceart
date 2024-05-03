@@ -30,12 +30,12 @@ export const ProductsComponent: React.FC = () => {
 
   return (
     <div>
-      <Breadcrumb className='my-50' items={breadCrumbItems} />
+      <Breadcrumb className='my-0' items={breadCrumbItems} />
       <AboutHeading
-        heading={filteredLead?.heading || translate('productsHeading')}
-        title={filteredLead?.title || translate('partnersTitle')}
+        heading={filteredLead?.heading || translate('products_heading')}
+        title={filteredLead?.title || translate('partners_title')}
         description={
-          filteredLead?.description || translate('partnersDescription')
+          filteredLead?.description || translate('partners_description')
         }
       />
       <div>

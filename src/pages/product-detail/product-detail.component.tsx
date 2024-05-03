@@ -65,20 +65,20 @@ const ProductDetailComponent = () => {
       <Breadcrumb items={breadCrumbItems} className='py-30' />
       <Flex className={flexClasses} gap={40} justify='space-between'>
         <h1 className={classes.title}>
-          {product?.about.title || translate('productLoanTitle')}
+          {product?.about.title || translate('product_loan_title')}
         </h1>
         <img src={product?.file.url} />
       </Flex>
       <Flex className={flexClasses} justify='space-between'>
         <Flex vertical gap={10}>
-          <h2 className={classes.titleSm}>{translate('aboutLoan')}</h2>
+          <h2 className={classes.titleSm}>{translate('about_loan')}</h2>
           <h1 className={classes.titleSecondary}>
-            {product?.about.title || translate('loanTitle')}
+            {product?.about.title || translate('loan_title')}
           </h1>
         </Flex>
         <Flex align='center'>
           <p className={classes.text}>
-            {product?.about.description || translate('productDetailText')}
+            {product?.about.description || translate('product_detail_text')}
           </p>
         </Flex>
       </Flex>
@@ -87,7 +87,7 @@ const ProductDetailComponent = () => {
           <Flex justify='center' align='center'>
             <DetailComponent
               icon={<WalletIcon />}
-              title={translate('loanAmount')}
+              title={translate('loan_amount')}
               value={product?.features.amount}
             />
           </Flex>
@@ -96,7 +96,7 @@ const ProductDetailComponent = () => {
           <Flex justify='center' align='center'>
             <DetailComponent
               icon={<InterestIcon />}
-              title={translate('loanDuration')}
+              title={translate('loan_duration')}
               value={product?.features.period}
             />
           </Flex>
@@ -105,7 +105,7 @@ const ProductDetailComponent = () => {
           <Flex justify='center' align='center'>
             <DetailComponent
               icon={<CalendarIcon />}
-              title={translate('loanInterest')}
+              title={translate('loan_interest')}
               value={product?.features.percentage}
             />
           </Flex>
@@ -114,7 +114,7 @@ const ProductDetailComponent = () => {
           <Flex justify='center' align='center'>
             <DetailComponent
               icon={<ComissionIcon />}
-              title={translate('loanComission')}
+              title={translate('loan_comission')}
               value={product?.features.comission}
             />
           </Flex>
@@ -123,7 +123,7 @@ const ProductDetailComponent = () => {
 
       <Flex className={classes.loanCalculator} gap={40}>
         <Flex vertical gap={20} className={classes.loanCalculatorInfo}>
-          <h1 className={classes.loanTitleSecondary}>{translate('loanTitleSecondary')}</h1>
+          <h1 className={classes.loanTitleSecondary}>{translate('loan_title_secondary')}</h1>
           <h2 className={classes.loanTitle}>{product?.about.title}</h2>
           <p className={classes.loanText}>
             {product?.about.description}
@@ -132,7 +132,7 @@ const ProductDetailComponent = () => {
         <Flex vertical gap={20} className='py-20 py-lg-120'>
           <Flex className={classes.inputCredentialsContainer}>
             <Flex vertical>
-              <h1>{translate('loanAmount')}</h1>
+              <h1>{translate('loan_amount')}</h1>
               <Card size='small'>{loanAmount}</Card>
               <Slider
                 value={loanAmount}
@@ -143,7 +143,7 @@ const ProductDetailComponent = () => {
               />
             </Flex>
             <Flex vertical>
-              <h1>{translate('loanDuration')}</h1>
+              <h1>{translate('loan_duration')}</h1>
               <Card size='small'>{loanDuration}</Card>
               <Slider
                 value={loanDuration}
@@ -154,7 +154,7 @@ const ProductDetailComponent = () => {
               />
             </Flex>
             <Flex vertical>
-              <h1>{translate('loanInterest')}</h1>
+              <h1>{translate('loan_interest')}</h1>
               <Card size='small'>{loanInterest}</Card>
               <Slider
                 value={loanInterest}
@@ -166,16 +166,16 @@ const ProductDetailComponent = () => {
             </Flex>
           </Flex>
           <Flex vertical gap={10}>
-            {translate('monthlyPayment')}
+            {translate('monthly_payment')}
             <span className={classes.loanResult}>897.78 ₼</span>
           </Flex>
           <Flex gap={40} className={'justify-content-center flex-lg-column'}>
             <Flex gap={10} vertical className={classes.inputCredentials}>
-              <Typography.Text>{translate('FINcode')}</Typography.Text>
+              <Typography.Text>{translate('FIN_code')}</Typography.Text>
               <Input placeholder='ABCDEFG' />
             </Flex>
             <Flex gap={10} vertical className={classes.inputCredentials}>
-              <Typography.Text>{translate('contactNumber')}</Typography.Text>
+              <Typography.Text>{translate('contact_number')}</Typography.Text>
               <Input placeholder='+994 00 000 00 00' />
             </Flex>
           </Flex>
@@ -187,11 +187,11 @@ const ProductDetailComponent = () => {
           >
             <Flex gap={10} align='center'>
               <Checkbox />
-              {translate('AKBpermission')}
+              {translate('akb_permission')}
             </Flex>
             <ButtonComponent type='primary' className={classes.applyBtn}>
               <Flex gap={20} align='center' justify='center'>
-                {translate('applyNow')} <ArrowRight className='' />
+                {translate('apply_now')} <ArrowRight className='' />
               </Flex>
             </ButtonComponent>
           </Flex>
