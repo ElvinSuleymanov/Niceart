@@ -7,6 +7,9 @@ const styles: Styles = {
   footerContainer: {
     marginTop: rem(250),
     width: sizes.full,
+    [breakpoint(390)]: {
+      marginTop:rem(90)
+    }
   },
   footer: {
     backgroundColor: colors.fadedBg,

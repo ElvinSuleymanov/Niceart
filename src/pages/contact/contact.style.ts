@@ -116,7 +116,7 @@ const styles:Styles = {
     flexColMobile: {'@media(max-width:992px)': {
         flexDirection:'column',
         alignItems:'center',
-        gap:rem(20)
+        gap:rem(17) + '!important'
     }
 },
 mapContainer: {

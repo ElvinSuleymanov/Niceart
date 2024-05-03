@@ -11,7 +11,7 @@ const PartnersComponent = () => {
   const translate = useLocalization();
   const filteredLead = leadsData?.find((lead) => lead.tag === 'Our goal');
   return (
-    <div>
+    <div className='px-15'>
       <AboutHeading
         heading={filteredLead?.heading || translate('partners_heading')}
         title={filteredLead?.title || translate('partners_title')}

@@ -16,13 +16,22 @@ title: {
     [breakpoint(992)]:  {
         textAlign:'center',
         fontSize:rem(55)
+    },
+    [breakpoint(390)]: {
+        fontSize:rem(36),
+        textAlign:'left',
+        lineHeight:rem(47),
+        height:'auto'
     }
 },
 playBtn: {
 position:'absolute',
 left:rem(10),
 bottom:rem(10),
-cursor:'pointer'
+cursor:'pointer',
+[breakpoint(390)]: {
+    display:'none'
+}
 },
 imageContainer: {
 position:'relative'
@@ -56,13 +65,20 @@ bannerBelowText: {
 banner: {
     paddingTop:rem(50),
     marginTop:rem(30),
-    backgroundColor:colors.fadedBg
+    backgroundColor:colors.fadedBg,
+    [breakpoint(390)]: {
+        paddingTop:rem(0),
+        marginTop:rem(0)
+    }
 }, 
 bannerTop: {
     [breakpoint(992)]:  {
     flexDirection:'column',
     alignItems:'center'
-}
+    },
+    [breakpoint(390)]: {
+        gap:rem(14) + '!important'
+    }
 },
 bannerAbout: {
     marginTop:rem(65),
@@ -74,12 +90,19 @@ bannerAbout: {
         flexDirection:'column',
         alignItems:'center'
     },
+    [breakpoint(390)]: {
+        marginTop:rem(10)
+    },
     '& img': {
         maxWidth:rem(498),
         width:sizes.full,
         height:rem(543),
         objectFit:'cover',
-        marginBottom:rem(-100)
+        marginBottom:rem(-100),
+        marginTop:rem(20),
+        [breakpoint(390)]: {
+            height:rem(364)
+        }
     },
     '& h2': {
         color:colors.greenMain,
@@ -101,12 +124,16 @@ propertyLoan: {
         flexDirection:'column',
         alignItems:'center',
         gap:rem(20)
+    },
+    [breakpoint(390)]: {
+        gap:rem(8) + '!important'
     }
 },
 propertyLoanTitle: {
     color:colors.textMain,
     fontSize:rem(44),
-    width:rem(300)
+    width:rem(300),
+   
 },
 propertyLoanTitleSecondary: {
     color:colors.greenMain,
@@ -129,6 +156,10 @@ loanCalculator: {
         flexDirection:'column',
         alignItems:'center',
         paddingTop:rem(50),
+    },
+    [breakpoint(390)]: {
+        paddingTop:rem(10),
+        marginTop:rem(30)
     }
 },
 loanText: {
@@ -195,7 +226,7 @@ flexColMobile: {
     [breakpoint(992)]:  {
     flexDirection:'column',
     alignItems:'center',
-    gap:rem(20)
+    gap:rem(20) + '!important'
 }
 }
 };

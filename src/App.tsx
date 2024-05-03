@@ -23,7 +23,7 @@ function App() {
                     <RouterProvider router={router}/>
                     {loader ? <LoaderComponent/> : null}
                 </div>
-                <ToastContainer
+                {/* <ToastContainer
                     position='bottom-right'
                     autoClose={5000}
                     hideProgressBar={false}
@@ -41,7 +41,7 @@ function App() {
                             maxHeight: '80vh',
                         }
                     }
-                />
+                /> */}
             </ConfigProvider>
             <ReactQueryDevtools initialIsOpen={false}/>
         </QueryClientProvider>

@@ -59,9 +59,9 @@ function HomeComponent() {
                 </p>
                 <Flex className={classes.text} vertical gap={24}>
                     {translate('home_text')}
-                    <Flex gap={30}>
+                    <Flex gap={20}>
 
-                    <ButtonComponent type='primary'>
+                    <ButtonComponent type='primary' className='mr-0'>
                         <Link to={Routes.products}>
                              <Flex gap={10} align='center' style={{color:'white'}}>
                                  {translate('products')} <ArrowRight className={''}/>
@@ -157,7 +157,7 @@ function HomeComponent() {
                         {translate('monthly_payment')}
                         <span className={classes.loanResult}>897.78 ₼</span>
                     </Flex>
-                    <Flex gap={40} className={'justify-content-center flex-lg-column'}>
+                    <Flex gap={40} className={classes.flexColMobile}>
                         <Flex gap={10} vertical className={classes.inputCredentials}>
                             <Typography.Text>
                                 {translate('FIN_code')}

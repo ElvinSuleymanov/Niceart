@@ -83,7 +83,7 @@ const ContactComponent = () => {
                     <Form.Item label={translate('email')} name={'email'}>
                         <Input placeholder={translate('email')}/>
                     </Form.Item>
-                    <Flex gap={33}>
+                    <Flex gap={33} className={classes.flexColMobile}>
                         <Form.Item className='w-100' label={translate('contact_number')} name={'phoneNumber'}>
                             <Input placeholder={translate('message')}/>
                         </Form.Item>
