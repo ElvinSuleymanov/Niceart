@@ -56,7 +56,7 @@ const AboutComponent = () => {
           </Flex>
           <Flex vertical className={classes.container} gap={30}>
             <PurposeComponent />
-            <Flex justify='flex-end' className='ml-30'>
+            <Flex justify='flex-end' className={classes.purposeMiddle}>
               <PurposeComponent />
             </Flex>
             <PurposeComponent />

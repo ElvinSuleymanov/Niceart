@@ -124,6 +124,12 @@ const styles:Styles = {
         [breakpoint(390)]: {
             gap:rem(30) + '!important'
         }
+    },
+    purposeMiddle: {
+        marginLeft:rem(30),
+        [breakpoint(992)]: {
+            marginLeft:rem(0)
+        }
     }
 };
 export const useAboutStyles = createUseStyles(styles);
